@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>Archives: 2018 | yoona-lin</title>
+  <title>hexo搭建个人博客总结（二） | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yoona-lin">
-<meta property="og:url" content="http://github.com/archives/2018/index.html">
+  <meta name="description" content="hexo搭建个人博客总结–进阶">
+<meta name="keywords" content="知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo搭建个人博客总结（二）">
+<meta property="og:url" content="http://github.com/2018/04/23/hexo搭建个人博客总结（二）/index.html">
 <meta property="og:site_name" content="yoona-lin">
+<meta property="og:description" content="hexo搭建个人博客总结–进阶">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://github.com/img/弹窗效果图.png">
+<meta property="og:updated_time" content="2018-04-23T14:17:26.614Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yoona-lin">
+<meta name="twitter:title" content="hexo搭建个人博客总结（二）">
+<meta name="twitter:description" content="hexo搭建个人博客总结–进阶">
+<meta name="twitter:image" content="http://github.com/img/弹窗效果图.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -142,36 +149,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo搭建个人博客总结（二）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      hexo搭建个人博客总结（二）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/23/hexo搭建个人博客总结（二）/" class="archive-article-date">
+
+        
+        <a href="/2018/04/23/hexo搭建个人博客总结（二）/" class="archive-article-date">
   	<time datetime="2018-04-23T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/23/hexo搭建个人博客总结（二）/">hexo搭建个人博客总结（二）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>hexo搭建个人博客总结–进阶<br><a id="more"></a></p>
+<h3 id="hexo项目介绍"><a href="#hexo项目介绍" class="headerlink" title="hexo项目介绍"></a>hexo项目介绍</h3><p><b style="color:red;font-size:20px;">注意冒号后面的空格</b></p>
+<h4 id="1-目录结构介绍"><a href="#1-目录结构介绍" class="headerlink" title="1.目录结构介绍"></a>1.目录结构介绍</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deploy #需要部署的文件</span><br><span class="line">node_modules #Hexo插件</span><br><span class="line">public #生成的静态网页文件</span><br><span class="line">scaffolds #模板</span><br><span class="line">source #博客正文和其他源文件，404、favicon、CNAME 都应该放在这里</span><br><span class="line">_drafts #草稿</span><br><span class="line">_posts #文章</span><br><span class="line">themes #主题</span><br><span class="line">_config.yml #全局配置文件</span><br><span class="line">package.json</span><br></pre></td></tr></table></figure>
+<h4 id="2-全局配置文件介绍"><a href="#2-全局配置文件介绍" class="headerlink" title="2.全局配置文件介绍"></a>2.全局配置文件介绍</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line">title: 个人博客     //页面标题</span><br><span class="line">subtitle: 玉面小飞龙     //小标题</span><br><span class="line">description: 贼溜     //描述</span><br><span class="line">author: Little Dragon       //作者</span><br><span class="line">language: zh-CN     //语言</span><br><span class="line">timezone:       //时区</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line"></span><br><span class="line">url: https://halomelody.github.io/      //个人域名</span><br><span class="line">root: /     //根目录</span><br><span class="line">permalink: :year/:month/:day/:title/        //文章创建后生成的目录结构</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Directory     //变量与目录的对应情况</span><br><span class="line"></span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line"></span><br><span class="line">new_post_name: :title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Home page setting</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># path: Root path for your blogs index page. (default = &apos;&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line"></span><br><span class="line">index_generator:        //分页设置</span><br><span class="line">  path: &apos;&apos;</span><br><span class="line">  per_page: 5</span><br><span class="line">  order_by: -date</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Category &amp; Tag</span><br><span class="line"></span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Date / Time format</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line"></span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line"></span><br><span class="line">per_page: 5</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line"></span><br><span class="line">theme: yilia        //主题配置</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line"></span><br><span class="line">deploy:     //发布对应的github账号</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:haloMelody/haloMelody.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>(上面有回答前面问题3的答案)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line"></span><br><span class="line">index_generator:        //分页设置</span><br><span class="line">  path: &apos;&apos;</span><br><span class="line">  per_page: 5</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-一些主题功能"><a href="#2-一些主题功能" class="headerlink" title="2.一些主题功能"></a>2.一些主题功能</h3><h4 id="1-弹框配置"><a href="#1-弹框配置" class="headerlink" title="1.弹框配置"></a>1.弹框配置</h4><p>首先需要具备hexo中nodeJS版本高于6.2才可以生效（下载最新的nodeJS-&gt;得到的hexo可以即可满足，可以通过hexo -v查看nodeJS版本）<br><img src="/img/弹窗效果图.png" alt="查看效果" title="描述"><br>在根目录配置文件中添加如下内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:  </span><br><span class="line">  meta: false  </span><br><span class="line">  pages: false  </span><br><span class="line">  posts:  </span><br><span class="line">    title: true  </span><br><span class="line">    date: true  </span><br><span class="line">    path: true  </span><br><span class="line">    text: true  </span><br><span class="line">    raw: false  </span><br><span class="line">    content: false  </span><br><span class="line">    slug: false  </span><br><span class="line">    updated: false  </span><br><span class="line">    comments: false  </span><br><span class="line">    link: false  </span><br><span class="line">    permalink: false  </span><br><span class="line">    excerpt: false  </span><br><span class="line">    categories: false  </span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-文章分类"><a href="#2-文章分类" class="headerlink" title="2.文章分类"></a>2.文章分类</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: hexo+github创建个人博客--深入篇</span><br><span class="line">categories: 瞎搞</span><br></pre></td></tr></table></figure>
+<h4 id="3-标签配置"><a href="#3-标签配置" class="headerlink" title="3.标签配置"></a>3.标签配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: hexo+github创建个人博客--深入篇</span><br><span class="line">tags: </span><br><span class="line">    - hexo</span><br><span class="line">    - github</span><br><span class="line">    - yilia</span><br></pre></td></tr></table></figure>
+<h4 id="4-目录配置"><a href="#4-目录配置" class="headerlink" title="4.目录配置"></a>4.目录配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: hexo+github创建个人博客--深入篇</span><br><span class="line">toc: true</span><br></pre></td></tr></table></figure>
+<h4 id="5-内容过长隐藏（回答前面的问题2）"><a href="#5-内容过长隐藏（回答前面的问题2）" class="headerlink" title="5.内容过长隐藏（回答前面的问题2）"></a>5.内容过长隐藏（回答前面的问题2）</h4><p>主题配置文件中配置截断显示的文字，excerpt_link: more ,此处显示为more<br>在文章中键入该注释，即可在该位置生效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="待续、、、、、、"><a href="#待续、、、、、、" class="headerlink" title="待续、、、、、、"></a>待续、、、、、、</h3>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -183,175 +229,116 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/23/hexo搭建个人博客总结（二）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/23/hexo搭建个人博客总结/" class="archive-article-date">
-  	<time datetime="2018-04-23T08:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/23/hexo搭建个人博客总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo搭建个人博客总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/23/hexo搭建个人博客总结/">hexo搭建个人博客总结</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/22/Markdowm/" class="archive-article-date">
-  	<time datetime="2018-04-22T08:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/22/Markdowm/">Markdowm</a>
-    </h1>
+  <div id="SOHUCS" sid="hexo搭建个人博客总结（二）" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/21/搞定/">基本搞定博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/20/原文档--Markdowm语法/" class="archive-article-date">
-  	<time datetime="2018-04-19T17:31:43.804Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/20/原文档--Markdowm语法/">原文档--Markdowm语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">杂集合</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -374,8 +361,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
