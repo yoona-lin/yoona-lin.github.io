@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="下载与安装git与node.js安装hexo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T14:23:01.996Z">
+<meta property="og:updated_time" content="2018-04-23T14:34:33.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建个人博客总结">
 <meta name="twitter:description" content="下载与安装git与node.js安装hexo">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -34,6 +34,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?24451a8b853bb443019686be21dfdff4";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -45,29 +55,31 @@
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="" class="profilepic">
-			<img src="/img/header.jpg" class="js-avatar">
+		<a href="/" class="profilepic">
+			<img src="http://ou36vgj5u.bkt.clouddn.com/image/blog/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="">lin</a></h1>
+		  <h1 class="header-author"><a href="/">lin</a></h1>
 		</hgroup>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">堕落千风</a></li>
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">所有文章</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">文章查找</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友情链接</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -78,14 +90,6 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/saucxs" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
 			</div>
 		</nav>
 	</header>		
@@ -102,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/img/header.jpg" class="js-avatar">
+				<img src="http://ou36vgj5u.bkt.clouddn.com/image/blog/head.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">lin</h1>
@@ -112,19 +116,13 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/saucxs" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -132,7 +130,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">堕落千风</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/archives">所有文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -181,41 +181,10 @@
 <h5 id="3-内容编辑（写博客）"><a href="#3-内容编辑（写博客）" class="headerlink" title="3.内容编辑（写博客）"></a>3.内容编辑（写博客）</h5><p>开启git bash here<br>hexo new page “name”    #新建一个博客主页面<br>hexo new “name”         #新建文章<br>接着这些东西放在哪里呢？这是最重要的，这样才能进行编写<br>下面流程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">根目录下的  source--&gt;   _post(没自己命名的)（或自己hexo new page &quot;name&quot;的name）--&gt;....md(这些md文件就是文章了)</span><br></pre></td></tr></table></figure></p>
 <p>了解md==markdowm语法编写请参考之前的博客文章<a href="https://yoona-lin.github.io/2018/04/20/%E5%8E%9F%E6%96%87%E6%A1%A3/" target="_blank" rel="noopener">原文档–Markdowm语法</a></p>
 <h5 id="4-问题解决"><a href="#4-问题解决" class="headerlink" title="4.问题解决"></a>4.问题解决</h5><p>1.静态博客的搭建<br>2.主题的修改<br>3.修改头像<br>4.内容编辑</p>
-<h5 id="5-问题待解决"><a href="#5-问题待解决" class="headerlink" title="5.问题待解决"></a>5.问题待解决</h5><p>1.在这里，但我们已经建立了一个 hexo new page “name”    #新建一个博客主  后再次新建一个hexo new page “name2” 这时博客主页不显示name2的文件内容？？？？？求大神指点！！！<br>2.如何隐藏过长的文章<a href="">(hexo搭建个人博客总结（二）已解决)</a><br>3.如果文章数量多了，如何实现换页<a href="">(hexo搭建个人博客总结（二）已解决)</a><br>4.相册的实现<br>5.云储存搭建<br>6.评论功能的插入<br>7.统计功能</p>
+<h5 id="5-问题待解决"><a href="#5-问题待解决" class="headerlink" title="5.问题待解决"></a>5.问题待解决</h5><p>1.在这里，但我们已经建立了一个 hexo new page “name”    #新建一个博客主  后再次新建一个hexo new page “name2” 这时博客主页不显示name2的文件内容？？？？？求大神指点！！！<br>2.如何隐藏过长的文章<a href="https://yoona-lin.github.io/2018/04/23/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank" rel="noopener">(hexo搭建个人博客总结（二）已解决)</a><br>3.如果文章数量多了，如何实现换页<a href="https://yoona-lin.github.io/2018/04/23/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank" rel="noopener">(hexo搭建个人博客总结（二）已解决)</a><br>4.相册的实现<br>5.云储存搭建<br>6.评论功能的插入<br>7.统计功能</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wechat.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/zfb.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -337,16 +306,6 @@
   
 
   
-  <div id="SOHUCS" sid="hexo搭建个人博客总结" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
-  
 
   
 
@@ -381,7 +340,7 @@
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -414,11 +373,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">文章查找</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友情链接</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
       
@@ -447,11 +406,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习进度</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
             
             <div class="clearfix"></div>
@@ -503,27 +466,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://www.baidu.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度一下</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度一下</a>
             </li>
           
         </ul>
@@ -534,7 +477,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">小本科一枚&lt;br&gt;&lt;br&gt;正读于广工，现是大二在校生&lt;br&gt;只是一个前端小开发</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">慢慢来，加油吧&lt;br&gt;做一个有计划，有规划的大学生&lt;br&gt;有思路时就多学点</div>
   	  	
     	</section>
     
