@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>基本搞定博客 | yoona-lin</title>
+  <title>面试题整理（js篇）(二) | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
-<meta name="keywords" content="日记">
+  <meta name="description" content="一些较不懂的js知识点">
+<meta name="keywords" content="知识点,面试题,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本搞定博客">
-<meta property="og:url" content="http://github.com/2018/04/21/搞定/index.html">
+<meta property="og:title" content="面试题整理（js篇）(二)">
+<meta property="og:url" content="http://github.com/2018/04/29/整理一些常见的面试题（二）/index.html">
 <meta property="og:site_name" content="yoona-lin">
-<meta property="og:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta property="og:description" content="一些较不懂的js知识点">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T12:59:15.007Z">
+<meta property="og:updated_time" content="2018-04-29T10:42:18.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基本搞定博客">
-<meta name="twitter:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta name="twitter:title" content="面试题整理（js篇）(二)">
+<meta name="twitter:description" content="一些较不懂的js知识点">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -147,29 +147,76 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搞定" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-整理一些常见的面试题（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      基本搞定博客
+      面试题整理（js篇）(二)
     </h1>
   
 
          
         
-        <a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
+        <a href="/2018/04/29/整理一些常见的面试题（二）/" class="archive-article-date">
+  	<time datetime="2018-04-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p><h3>露出老母亲般欢喜的笑容</h3><p></p>
-<p>烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！</p>
+        <p>一些较不懂的js知识点<br><a id="more"></a></p>
+<h3 id="1-javascript数据变量"><a href="#1-javascript数据变量" class="headerlink" title="1.javascript数据变量"></a>1.javascript数据变量</h3><ul>
+<li>var let const</li>
+<li>区别：<ul>
+<li>1.var<br>var定义全局变量和局部变量，也可以省略var，而且在非严格模式下不会报错，但是实际上在严格模式下，两者的使用有没有区别，可能很多人不清楚。例如循环，跳出循环依旧会有效</li>
+<li>2.let<br>let拥有块级作用域,一个{}就是一个作用域，也就是let声明块级变量，即局部变量；<br>let在其作用域下面不存在变量提升；<br>let在其作用域中不能被重复声明(函数作用域和块级作用域)。</li>
+<li>3.const<br>const用来声明常量，一旦声明，其值就不可以更改，而且必须初始化。如果你非得修改变量的值，js不会报错，只是默默表示失败(不起作用)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-JavaScript内置对象有以下几种。"><a href="#2-JavaScript内置对象有以下几种。" class="headerlink" title="2.JavaScript内置对象有以下几种。"></a>2.JavaScript内置对象有以下几种。</h3><ul>
+<li>String对象：处理所有的字符串操作 </li>
+<li>Math对象：处理所有的数学运算 </li>
+<li>Date对象：处理日期和时间的存储、转化和表达 </li>
+<li>Array对象：提供一个数组的模型、存储大量有序的数据 </li>
+<li>Event对象：提供JavaScript事件的各种处理信息 </li>
+</ul>
+<h3 id="3-JavaScript内置函数"><a href="#3-JavaScript内置函数" class="headerlink" title="3.JavaScript内置函数"></a>3.JavaScript内置函数</h3><p>①：escape( )escape() 函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。 eg:?=%3<br>②：eval( ) eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码。<br>eg:eval(“x=10;y=20;document.write(x*y)”)<br>③：isFinite( )isFinite() 函数用于检查其参数是否是无穷大。返回true或者false。<br>④：isNaN( ) isNaN( ) 函数可用于判断其参数是否是 NaN<br>⑤：parseFloat( )parseFloat() 函数可解析一个字符串，并返回一个浮点数。<br>⑥;parseInt( ) parseInt() 函数可解析一个字符串，并返回一个整数。<br>⑦：unescape( ) unescape() 函数可对通过 escape() 编码的字符串进行解码。</p>
+<h3 id="4-JavaScript对数组的操作有哪些？"><a href="#4-JavaScript对数组的操作有哪些？" class="headerlink" title="4.JavaScript对数组的操作有哪些？"></a>4.JavaScript对数组的操作有哪些？</h3><p>1.数组建立（new）<br>2.数组元素的访问（循环）<br>3.数组的元素添加(push末尾，unshift开头)<br>4.数组元素的删除（pop最后，shift开头，splice(startIndex , deletSize)指定位置）<br>5.数组元素拷贝和复制（slice(start,end)返回一个新数组，其中以start开始，end结束且不包括end;<br>6.concat(element1[element2[]]…);将多个数组重新连成一个新的数组），<br>7.数组元素顺序（sort();数组排序。<br>8.reverse()；数组反转。）<br>9.数组转化为字符串（oin(seperater)）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">objArr.sort(function(a,b)&#123;return a&gt;b?1:-1&#125;);//从小到大排序</span><br><span class="line">objArr.sort(function(a,b)&#123;return a&lt;b?1:-1&#125;);//从大到小排序</span><br></pre></td></tr></table></figure></p>
+<h3 id="5-JavaScript的作用域和作用域链？"><a href="#5-JavaScript的作用域和作用域链？" class="headerlink" title="5.JavaScript的作用域和作用域链？"></a>5.JavaScript的作用域和作用域链？</h3><ul>
+<li>作用域<ul>
+<li>全局作用域（Global Scope）<br>在代码中任何地方都能访问到的对象拥有全局作用域，<br>1，最外层函数和在最外层函数外面定义的变量拥有全局作用域<br>2，所有末定义直接赋值的变量自动声明为拥有全局作用域<br>3，所有window对象的属性拥有全局作用域</li>
+<li>局部作用域<br>与全局作用于相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部</li>
+</ul>
+</li>
+<li>作用域链<br>在函数执行过程中，每遇到一个变量，都会经历一次标识符解析过程以决定从哪里获取和存储数据。该过程从作用域链头部，也就是从活动对象开始搜索，查找同名的标识符，如果找到了就使用这个标识符对应的变量，如果没找到继续搜索作用域链中的下一个对象，如果搜索完所有对象都未找到，则认为该标识符未定义。</li>
+</ul>
+<h3 id="6-双向绑定的实现原理"><a href="#6-双向绑定的实现原理" class="headerlink" title="6.双向绑定的实现原理"></a>6.双向绑定的实现原理</h3><p>简单来说，就是监听dom事件，例如change,或者键盘回车，获取改变后的值，赋值给指定的职位，整个都是在函数中完成。<br>有的框架，基本思路是使用Object.defineProperty对数据对象做属性get和set的监听，当有数据读取和赋值操作时则调用节点的指令，这样使用最通用的 = 等号 赋值就可以了。</p>
+<h3 id="7-前端框架Vue、Angular、React的优点和缺点"><a href="#7-前端框架Vue、Angular、React的优点和缺点" class="headerlink" title="7.前端框架Vue、Angular、React的优点和缺点"></a>7.前端框架Vue、Angular、React的优点和缺点</h3><ul>
+<li>Vue.js的特性如下：<br>1.轻量级的框架 2.双向数据绑定 3.指令 4.插件化<ul>
+<li>优点：<br>  1，简单：官方文档很清晰，比 Angular 简单易学。<br>  2，快速：异步批处理方式更新 DOM。<br>  3， 组合：用解耦的、可复用的组件组合你的应用程序。<br>  4，紧凑：18kb min+gzip，且无依赖。<br>  5，强大：表达式 &amp; 无需声明依赖的可推导属性 (computed properties)。<br>  6，对模块友好：可以通过 NPM、Bower 或 Duo 安装，不强迫你所有的代码都遵循 Angular 的各种规定，使用场景更加灵活。</li>
+<li>缺点：<br>  1，新生儿：Vue.js是一个新的项目，没有angular那么成熟。<br>  2，影响度不是很大：google了一下，有关于Vue.js多样性或者说丰富性少于其他一些有名的库。</li>
+</ul>
+</li>
+<li>angular：<br>1良好的应用程序结构<br>2.双向数据绑定<br>3.指令<br>4.HTML模板<br>5.可嵌入、注入和测试<ul>
+<li>优点：<br>1.模板功能强大丰富，自带了极其丰富的angular指令。<br>2.是一个比较完善的前端框架，包含服务，模板，数据双向绑定，模块化，路由，过滤器，依赖注入等所有功能；<br>3.自定义指令，自定义指令后可以在项目中多次使用。<br>4.ng模块化比较大胆的引入了Java的一些东西（依赖注入），能够很容易的写出可复用的代码，对于敏捷开发的团队来说非常有帮助。<br>5.angularjs是互联网巨人谷歌开发，这也意味着他有一个坚实的基础和社区支持。</li>
+<li>缺点：<br>1，angular 入门很容易 但深入后概念很多, 学习中较难理解.<br>2，文档例子非常少, 官方的文档基本只写了api, 一个例子都没有, 很多时候具体怎么用都是google来的, 或直接问misko,angular的作者.<br>3，对IE6/7 兼容不算特别好, 就是可以用jQuery自己手写代码解决一些.</li>
+</ul>
+</li>
+<li>React特性如下：　<br>1.声明式设计：React采用声明模式，可以轻松描述应用。<br>2.高效：React通过对DOM的模拟，最大限度地减少与DOM的交互。<br>3.灵活：React可以与已知的库或框架很好地配合。<ul>
+<li>优点：<br>1，速度快：在UI渲染过程中，React通过在虚拟DOM中的微操作来实现对实际DOM的局部更新。<br>2，跨浏览器兼容：虚拟DOM帮助我们解决了跨浏览器问题，它为我们提供了标准化的API，甚至在IE8中都是没问题的。<br>3，模块化：为你程序编写独立的模块化UI组件，这样当某个或某些组件出现问题是，可以方便地进行隔离。<br>4，单向数据流：Flux是一个用于在JavaScript应用中创建单向数据层的架构，它随着React视图库的开发而被Facebook概念化。<br>5，同构、纯粹的javascript：因为搜索引擎的爬虫程序依赖的是服务端响应而不是JavaScript的执行，预渲染你的应用有助于搜索引擎优化。<br>6，兼容性好：比如使用RequireJS来加载和打包，而Browserify和Webpack适用于构建大型应用。它们使得那些艰难的任务不再让人望而生畏。<br>缺点：<br>1，React本身只是一个V而已，并不是一个完整的框架，所以如果是大型项目想要一套完整的框架的话，基本都需要加上ReactRouter和Flux才能写大型应用。</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-对比一下jquery和vuejs"><a href="#8-对比一下jquery和vuejs" class="headerlink" title="8.对比一下jquery和vuejs"></a>8.对比一下jquery和vuejs</h3><ul>
+<li>jquery：对HTML的操作。绑定事件。请求数据。更多是以事件为入口去处理HTML。操作细腻。不过维护起来累</li>
+<li>vuejs：逻辑简单，代码量少，组件化。根据页面的功能定义，构造出属于它的数据。需要事件触发，再编写起方法。基本的方法是数据的处理。</li>
+</ul>
+
       
 
       
@@ -182,7 +229,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -238,7 +293,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/21/搞定/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/29/整理一些常见的面试题（二）/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -252,18 +307,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/04/22/Markdowm/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/30/ES6语法总结/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdowm
+          ES6语法总结
         
       </div>
     </a>
   
   
-    <a href="/2018/04/20/原文档--Markdowm语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">原文档--Markdowm语法</div>
+    <a href="/2018/04/27/整理一些常见的面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题整理（js篇）(一)</div>
       <i class="icon-circle-right"></i>
     </a>
   

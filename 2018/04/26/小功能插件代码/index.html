@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>基本搞定博客 | yoona-lin</title>
+  <title>小功能插件 | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
-<meta name="keywords" content="日记">
+  <meta name="description" content="一些常见的插件功能代码加一个牛逼哄哄的网站">
+<meta name="keywords" content="小插件,codepen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本搞定博客">
-<meta property="og:url" content="http://github.com/2018/04/21/搞定/index.html">
+<meta property="og:title" content="小功能插件">
+<meta property="og:url" content="http://github.com/2018/04/26/小功能插件代码/index.html">
 <meta property="og:site_name" content="yoona-lin">
-<meta property="og:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta property="og:description" content="一些常见的插件功能代码加一个牛逼哄哄的网站">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T12:59:15.007Z">
+<meta property="og:updated_time" content="2018-04-27T04:00:35.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基本搞定博客">
-<meta name="twitter:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta name="twitter:title" content="小功能插件">
+<meta name="twitter:description" content="一些常见的插件功能代码加一个牛逼哄哄的网站">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -147,29 +147,51 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搞定" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-小功能插件代码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      基本搞定博客
+      小功能插件
     </h1>
   
 
          
         
-        <a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
+        <a href="/2018/04/26/小功能插件代码/" class="archive-article-date">
+  	<time datetime="2018-04-26T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p><h3>露出老母亲般欢喜的笑容</h3><p></p>
-<p>烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！</p>
+        <p>一些常见的插件功能代码<code>加一个牛逼哄哄的网站</code><br><a id="more"></a></p>
+<h3 id="1-插入框实现代码在线运行"><a href="#1-插入框实现代码在线运行" class="headerlink" title="1. 插入框实现代码在线运行"></a>1. 插入框实现代码在线运行</h3><p>如下（输入代码）：</p>
+<p><textarea id="code" cols="40" rows="10" style="width:90%;background-color:#eee;"></textarea></p>
+<p><input type="button" value="运行代码" id="run"> </p>
+<script> 
+    window.onload=function(){ 
+        var run=document.getElementById('run'); 
+        var code=document.getElementById('code'); 
+
+        run.onclick=function(){ 
+            var win=window.open('about:blank','_blank');    
+            win.document.write(code.value); 
+            //强制从缓存区输出内容 
+            win.document.close(); 
+        }    
+    } 
+</script>
+
+<p>源码为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea id=&quot;code&quot; cols=&quot;40&quot; rows=&quot;10&quot; style=&quot;width:90%;background-color:#eee;&quot;&gt;&lt;/textarea&gt;&lt;br&gt;</span><br><span class="line">&lt;input type=&quot;butoon&quot; value=&quot;运行代码&quot; id=&quot;run&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	window.onload = function () &#123;</span><br><span class="line">		var run = document.getElementById(&apos;run&apos;);</span><br><span class="line">		var code = document.getElementById(&apos;code&apos;);</span><br><span class="line"></span><br><span class="line">		run.onclick = function () &#123;</span><br><span class="line">			var win = window.open(&apos;about:blank&apos;,&apos;_blank&apos;);</span><br><span class="line"></span><br><span class="line">			win.document.write(code.value);</span><br><span class="line">			//强制从缓冲区输出内容</span><br><span class="line">			win.document.close();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>测试一下(copy下面代码),运行试试看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;text&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;h2&gt;hello world&lt;/h2&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="重大发现"><a href="#重大发现" class="headerlink" title="重大发现"></a>重大发现</h3><p><strong><br>还有就是今天好像发现了一个很666的东西<br><code>codepen</code><br>CodePen.io:网站前端设计开发平台是一个针对网站前端代码设计的开发工具，提供多种效果的网站前端代码设计工具，丰富的案例特效，用户可以demo的基础上开发自己的前端设计。<br><del>~</del>~贼帅<del>~</del></strong></p>
+<p><a href="https://codepen.io/" target="_blank" rel="noopener">codepen 官网</a><br><a href="http://www.fontawesome.com.cn/icons/codepen/" target="_blank" rel="noopener">codepen 中文官网</a><br><a href="https://codepen.io/2016/popular/pens/" target="_blank" rel="noopener">2016 排行前100的酷炫设计</a></p>
+<p><strong>慢慢研究学习</strong></p>
+
       
 
       
@@ -182,7 +204,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小插件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">codepen</a>
         		</li>
       		
 		</ul>
@@ -238,7 +264,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/21/搞定/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/26/小功能插件代码/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -252,18 +278,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/04/22/Markdowm/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/27/整理一些常见的面试题/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdowm
+          面试题整理（js篇）(一)
         
       </div>
     </a>
   
   
-    <a href="/2018/04/20/原文档--Markdowm语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">原文档--Markdowm语法</div>
+    <a href="/2018/04/25/hexo搭建个人博客总结（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo搭建个人博客总结（三）</div>
       <i class="icon-circle-right"></i>
     </a>
   

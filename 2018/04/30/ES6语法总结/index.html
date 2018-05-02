@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>基本搞定博客 | yoona-lin</title>
+  <title>ES6语法总结 | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
-<meta name="keywords" content="日记">
+  <meta name="description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
+<meta name="keywords" content="知识点,ES6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基本搞定博客">
-<meta property="og:url" content="http://github.com/2018/04/21/搞定/index.html">
+<meta property="og:title" content="ES6语法总结">
+<meta property="og:url" content="http://github.com/2018/04/30/ES6语法总结/index.html">
 <meta property="og:site_name" content="yoona-lin">
-<meta property="og:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta property="og:description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T12:59:15.007Z">
+<meta property="og:updated_time" content="2018-04-30T13:09:17.869Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基本搞定博客">
-<meta name="twitter:description" content="露出老母亲般欢喜的笑容 烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！">
+<meta name="twitter:title" content="ES6语法总结">
+<meta name="twitter:description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -147,29 +147,72 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-搞定" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6语法总结" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      基本搞定博客
+      ES6语法总结
     </h1>
   
 
          
         
-        <a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
+        <a href="/2018/04/30/ES6语法总结/" class="archive-article-date">
+  	<time datetime="2018-04-30T04:08:02.901Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p></p><h3>露出老母亲般欢喜的笑容</h3><p></p>
-<p>烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！</p>
+        <p>ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点<br><a id="more"></a></p>
+<h3 id="1-let"><a href="#1-let" class="headerlink" title="1.let"></a>1.let</h3><ul>
+<li>表示<code>变量</code>，相当于之前的 var</li>
+<li><p>注意：<br>1.没有预编译，<code>不存在变量提升</code>；</p>
+<ul>
+<li>在代码块内，只要let定义变量，在之前使用，都是报错；</li>
+<li>先定义完，再使用；</li>
+</ul>
+<p>2.不能重复定义；但能重新赋值；<br>3.for循环，for循环里面是父级作用域，里面又一个；</p>
+</li>
+<li>补充一个变量提升知识：<br>在ES6之前，我们都是用var关键字声明变量。无论声明在何处，都会被视为声明在函数的最顶部(不在函数内即在全局作用域的最顶部)。这就是函数变量提升例如:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">aa</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">      <span class="keyword">var</span> test = <span class="string">'hello man'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(test)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>而上面的代码在执行时会经过预编译环节，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">aa</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> test <span class="comment">// 变量提升</span></span><br><span class="line">    <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">        test = <span class="string">'hello man'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//此处访问test 值为undefined</span></span><br><span class="line">        <span class="built_in">console</span>.log(test)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//此处访问test 值为undefined</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-count"><a href="#2-count" class="headerlink" title="2.count"></a>2.count</h3><ul>
+<li><code>常量声明</code>,定义完变量必须有值，不能之后赋值，不能修改；</li>
+<li><p>声明的变量都会被认为是常量，意思就是它的值被设置完成后就<code>不能再修改</code>了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const name = &apos;lux&apos;</span><br><span class="line">name = &apos;joe&apos; //再次赋值此时会报错</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>还有，如果const的是一个对象，对象所包含的值是可以被修改的。抽象一点儿说，就是<code>对象所指向的地址</code>没有变就行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> student = &#123; <span class="attr">name</span>: <span class="string">'cc'</span> &#125;</span><br><span class="line"><span class="comment">// 没毛病</span></span><br><span class="line">student.name = <span class="string">'yy'</span></span><br><span class="line"><span class="comment">// 如果这样子就会报错了</span></span><br><span class="line">student  = &#123; <span class="attr">name</span>: <span class="string">'yy'</span> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下面看一道实例面试题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> funcs = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        funcs.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(i) &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    funcs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">func</span>) </span>&#123;</span><br><span class="line">        func()</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这样的面试题是大家常见，很多同学一看就知道输出 10 十次<br>但是如果我们想依次输出0到9呢？<br>有两种解决方法。直接看一下代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5告诉我们可以利用闭包解决这个问题</span></span><br><span class="line"><span class="comment">// 立即执行函数</span></span><br><span class="line"><span class="comment">//(function() &#123;</span></span><br><span class="line"><span class="comment">//    return function() &#123;          </span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line"><span class="comment">//&#125;)()</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> funcs = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        funcs.push(</span><br><span class="line">          (<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(value)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(i)</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">    funcs.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">func</span>) </span>&#123;</span><br><span class="line">        func()</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 再来看看es6怎么处理的</span></span><br><span class="line">    <span class="keyword">const</span> funcs = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        funcs.push(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(i)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    funcs.forEach(<span class="function"><span class="params">func</span> =&gt;</span> func())</span><br></pre></td></tr></table></figure>
+<h3 id="3-块级作用域"><a href="#3-块级作用域" class="headerlink" title="3.块级作用域"></a>3.块级作用域</h3><ul>
+<li>let和const都是块级作用域</li>
+<li>在一个函数内部</li>
+<li>在一个代码块内部</li>
+<li>说白了 <code>{}大括号内的代码块</code>即为let 和 const的作用域。</li>
+<li>如：<br><strong>let的作用域是在它所在当前代码块，但不会被提升到当前函数的最顶部。</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">aa</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(bool) &#123;</span><br><span class="line">     <span class="keyword">let</span> test = <span class="string">'hello man'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">//test 在此处访问不到</span></span><br><span class="line">      <span class="built_in">console</span>.log(test)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-结构赋值"><a href="#4-结构赋值" class="headerlink" title="4.结构赋值"></a>4.结构赋值</h3><ol>
+<li>非常有用，特别是在做数据交互 ajax；<br> <code>(let[a,b,c] = [1,2,3])</code><br> <strong>注意：左右两边，结构保持一致</strong></li>
+<li>解构时可以给初始值<br> <code>let[a,b,c=&#39;默认值&#39;] = [&#39;aaa&#39;,&#39;bbb];</code></li>
+</ol>
+<h3 id="5-字符串模板"><a href="#5-字符串模板" class="headerlink" title="5.字符串模板"></a>5.字符串模板</h3><p>1.基本的字符串格式化。将表达式嵌入字符串中进行拼接。用<code>${}</code>来界定引用变量,且可以随意换行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ES5 </span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + name)</span><br><span class="line"><span class="comment">//es6</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;name&#125;</span>`</span>) <span class="comment">//hello lux</span></span><br></pre></td></tr></table></figure></p>
+<p>2.在ES5时我们通过反斜杠<code>(\)</code>来做多行字符串或者字符串一行行拼接。ES6反引号<code>(`</code>)`直接搞定。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line">    <span class="keyword">var</span> msg = <span class="string">"Hi \</span></span><br><span class="line"><span class="string">    man!</span></span><br><span class="line"><span class="string">    "</span></span><br><span class="line">    <span class="comment">// ES6</span></span><br><span class="line">    <span class="keyword">const</span> template = <span class="string">`&lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;span&gt;hello world&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>3.字符串ES6当然也提供了很多厉害也很有意思的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.includes：判断是否包含字符串，然后直接返回布尔值</span></span><br><span class="line">    <span class="keyword">const</span> str = <span class="string">'hahay'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.includes(<span class="string">'y'</span>)) <span class="comment">// true</span></span><br><span class="line">	<span class="comment">// str.indexOf(要找的东西) 返回索引（位置），没找到返回-1；</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.repeat: 获取字符串重复n次</span></span><br><span class="line">    <span class="keyword">const</span> str = <span class="string">'he'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.repeat(<span class="number">3</span>)) <span class="comment">// 'hehehe'</span></span><br><span class="line">    <span class="comment">//如果你带入小数, Math.floor(num) 来处理</span></span><br><span class="line">    <span class="comment">// s.repeat(3.1) 或者 s.repeat(3.9) 都当做成 s.repeat(3) 来处理</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. startsWith 和 endsWith 判断是否以 给定文本 开始或者结束</span></span><br><span class="line">    <span class="keyword">const</span> str =  <span class="string">'hello world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.startsWith(<span class="string">'hello'</span>)) <span class="comment">// true</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.endsWith(<span class="string">'!'</span>)) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//4.str.padStart(整个字符串长度，填充东西)  玩前填充</span></span><br><span class="line">	    str.padStart(整个字符串长度，填充东西)  玩后填充</span><br></pre></td></tr></table></figure></p>
+<h3 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h3><p>一个不错的ES6教学视频：<a href="http://study.163.com/course/courseMain.htm?courseId=1005211046" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=1005211046</a><br>参考來源：简书；作者：陈嘻嘻啊；链接：<a href="https://www.jianshu.com/p/287e0bb867ae" target="_blank" rel="noopener">https://www.jianshu.com/p/287e0bb867ae</a></p>
+
       
 
       
@@ -182,7 +225,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
@@ -238,7 +285,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/21/搞定/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/04/30/ES6语法总结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -252,18 +299,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/04/22/Markdowm/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Markdowm
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/20/原文档--Markdowm语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">原文档--Markdowm语法</div>
+    <a href="/2018/04/29/整理一些常见的面试题（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题整理（js篇）(二)</div>
       <i class="icon-circle-right"></i>
     </a>
   

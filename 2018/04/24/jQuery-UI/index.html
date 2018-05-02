@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="jQueryUI 是以 jQuery 为基础的开源 JavaScript 网页用户界面代码库。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-24T18:11:36.558Z">
+<meta property="og:updated_time" content="2018-04-26T15:06:19.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery-UI学习进度">
 <meta name="twitter:description" content="jQueryUI 是以 jQuery 为基础的开源 JavaScript 网页用户界面代码库。">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://ou36vgj5u.bkt.clouddn.com/image/blog/head.jpg" class="js-avatar">
+			<img src="http://p7sh0ytqi.bkt.clouddn.com/header.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">lin</a></h1>
@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://ou36vgj5u.bkt.clouddn.com/image/blog/head.jpg" class="js-avatar">
+				<img src="http://p7sh0ytqi.bkt.clouddn.com/header.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">lin</h1>
@@ -158,6 +158,7 @@ var _hmt = _hmt || [];
     </h1>
   
 
+         
         
         <a href="/2018/04/24/jQuery-UI/" class="archive-article-date">
   	<time datetime="2018-04-23T16:22:52.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
@@ -185,9 +186,26 @@ var _hmt = _hmt || [];
 <p>下午 15:09 继续学习</p>
 <ul>
 <li>验证插件</li>
-<li>验证注册表单</li>
+<li>验证注册表单<h3 id="2018-04-26学习"><a href="#2018-04-26学习" class="headerlink" title="2018-04-26学习"></a>2018-04-26学习</h3></li>
+<li>ajax表单插件<br><code>（接下来讲到了数据库的搭建，需不需要去了解一下数据库？？？）
+（想了一下，还是暂时先留着！！！）
+（先了解性地刷完下面的课程，到时再回头仔细看一遍 ==</code></li>
 </ul>
+<p><textarea id="code" cols="40" rows="10" style="width:90%;background-color:#eee;"></textarea><br> </p>
+<p><input type="button" value="运行代码" id="run"> </p>
+<script> 
+window.onload=function(){ 
+var run=document.getElementById('run'); 
+var code=document.getElementById('code'); 
 
+run.onclick=function(){ 
+var win=window.open('about:blank','_blank');    
+win.document.write(code.value); 
+//强制从缓存区输出内容 
+win.document.close(); 
+}    
+} 
+</script>
       
 
       
@@ -327,15 +345,20 @@ var _hmt = _hmt || [];
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2018 lin
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+        <div class="footer-left">
+        &copy; 2018 lin
+        
+            <span id="busuanzi_container_site_pv">本站被踩过<span id="busuanzi_value_site_pv"></span>次</span>
+        
+        
+        </div>
     </div>
   </div>
+
 </footer>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -415,15 +438,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">codepen</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习进度</a>
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习进度</a>
               </li>
             
             <div class="clearfix"></div>
