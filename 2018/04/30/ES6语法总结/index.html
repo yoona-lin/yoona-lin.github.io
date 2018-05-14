@@ -9,14 +9,14 @@
   <title>ES6语法总结 | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
-<meta name="keywords" content="知识点,ES6">
+<meta name="keywords" content="ES6,知识点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6语法总结">
 <meta property="og:url" content="http://github.com/2018/04/30/ES6语法总结/index.html">
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-30T13:09:17.869Z">
+<meta property="og:updated_time" content="2018-05-03T13:28:02.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6语法总结">
 <meta name="twitter:description" content="ES6经常听到，所以去看了一些视频了解一下，加上参考他人博客，总结出下面一些重要知识点">
@@ -208,10 +208,99 @@ var _hmt = _hmt || [];
 <li>非常有用，特别是在做数据交互 ajax；<br> <code>(let[a,b,c] = [1,2,3])</code><br> <strong>注意：左右两边，结构保持一致</strong></li>
 <li>解构时可以给初始值<br> <code>let[a,b,c=&#39;默认值&#39;] = [&#39;aaa&#39;,&#39;bbb];</code></li>
 </ol>
-<h3 id="5-字符串模板"><a href="#5-字符串模板" class="headerlink" title="5.字符串模板"></a>5.字符串模板</h3><p>1.基本的字符串格式化。将表达式嵌入字符串中进行拼接。用<code>${}</code>来界定引用变量,且可以随意换行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ES5 </span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + name)</span><br><span class="line"><span class="comment">//es6</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;name&#125;</span>`</span>) <span class="comment">//hello lux</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="5-字符串模板"><a href="#5-字符串模板" class="headerlink" title="5.字符串模板"></a>5.字符串模板</h3><p>1.基本的字符串格式化。将表达式嵌入字符串中进行拼接。用<code>${}</code>来界定引用变量,且可以随意换行。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ES5</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + name)</span><br><span class="line"><span class="comment">//es6</span></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">'lux'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello <span class="subst">$&#123;name&#125;</span>`</span>) <span class="comment">//hello lux</span></span><br></pre></td></tr></table></figure></p>
 <p>2.在ES5时我们通过反斜杠<code>(\)</code>来做多行字符串或者字符串一行行拼接。ES6反引号<code>(`</code>)`直接搞定。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line">    <span class="keyword">var</span> msg = <span class="string">"Hi \</span></span><br><span class="line"><span class="string">    man!</span></span><br><span class="line"><span class="string">    "</span></span><br><span class="line">    <span class="comment">// ES6</span></span><br><span class="line">    <span class="keyword">const</span> template = <span class="string">`&lt;div&gt;</span></span><br><span class="line"><span class="string">        &lt;span&gt;hello world&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>3.字符串ES6当然也提供了很多厉害也很有意思的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.includes：判断是否包含字符串，然后直接返回布尔值</span></span><br><span class="line">    <span class="keyword">const</span> str = <span class="string">'hahay'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.includes(<span class="string">'y'</span>)) <span class="comment">// true</span></span><br><span class="line">	<span class="comment">// str.indexOf(要找的东西) 返回索引（位置），没找到返回-1；</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.repeat: 获取字符串重复n次</span></span><br><span class="line">    <span class="keyword">const</span> str = <span class="string">'he'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.repeat(<span class="number">3</span>)) <span class="comment">// 'hehehe'</span></span><br><span class="line">    <span class="comment">//如果你带入小数, Math.floor(num) 来处理</span></span><br><span class="line">    <span class="comment">// s.repeat(3.1) 或者 s.repeat(3.9) 都当做成 s.repeat(3) 来处理</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. startsWith 和 endsWith 判断是否以 给定文本 开始或者结束</span></span><br><span class="line">    <span class="keyword">const</span> str =  <span class="string">'hello world!'</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.startsWith(<span class="string">'hello'</span>)) <span class="comment">// true</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.endsWith(<span class="string">'!'</span>)) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//4.str.padStart(整个字符串长度，填充东西)  玩前填充</span></span><br><span class="line">	    str.padStart(整个字符串长度，填充东西)  玩后填充</span><br></pre></td></tr></table></figure></p>
-<h3 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h3><p>一个不错的ES6教学视频：<a href="http://study.163.com/course/courseMain.htm?courseId=1005211046" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=1005211046</a><br>参考來源：简书；作者：陈嘻嘻啊；链接：<a href="https://www.jianshu.com/p/287e0bb867ae" target="_blank" rel="noopener">https://www.jianshu.com/p/287e0bb867ae</a></p>
+<h3 id="6-函数变化"><a href="#6-函数变化" class="headerlink" title="6. 函数变化"></a>6. 函数变化</h3><ul>
+<li><p>函数的默认参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">&#123;x=<span class="number">0</span>,y=<span class="number">0</span>&#125;=&#123;&#125;</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x,y);</span><br><span class="line">&#125;</span><br><span class="line">show();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数参数默认值若已经定义，则不能再使用let、const声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params">&#123;x=<span class="number">10</span></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> x = <span class="number">101</span>; <span class="comment">//错误</span></span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">show();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>扩展运算符–reset运算符</p>
+<ul>
+<li>展开数组<ul>
+<li>… ：[1,2,3] -&gt; …[1,2,3] -&gt; 1,2,3;</li>
+<li>1,2,3 -&gt; …1,2,3 -&gt; [1,2,3]</li>
+<li>剩余参数，必须放到最后</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>箭头函数   <code>=&gt;</code><br>箭头函数最直观的三个特点：</p>
+<ul>
+<li>不需要 function 关键字来创建函数</li>
+<li>省略 return 关键字</li>
+<li>继承当前上下文的 this 关键字</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例如：</span></span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function"><span class="params">x</span> =&gt;</span> x + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//等同于：</span></span><br><span class="line">    [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map((<span class="function"><span class="keyword">function</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + <span class="number">1</span></span><br><span class="line">    &#125;).bind(<span class="keyword">this</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> show() = &#123;&#125; =&gt; <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">&#123;&#125; =&gt; <span class="keyword">return</span>东西</span><br><span class="line"></span><br><span class="line">&#123;&#125; =&gt; &#123;</span><br><span class="line">  语句；</span><br><span class="line">  <span class="keyword">return</span>东西；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>this问题，定义所在的对象，不再是运行时所在的对象（即不再是函数谁调用就指向谁）</li>
+<li>箭头函数里面没有arguments，用 <code>...</code>;</li>
+<li>箭头函数不能当构造函数；</li>
+</ol>
+<ul>
+<li>来道笔试题：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 请使用ES6重构以下代码</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> calculate = <span class="function"><span class="keyword">function</span>(<span class="params">x, y, z</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> x != number) &#123; x = <span class="number">0</span> &#125;</span><br><span class="line">      <span class="keyword">if</span> (<span class="keyword">typeof</span> y != number) &#123; y = <span class="number">6</span> &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">var</span> dwt = x % y</span><br><span class="line">      <span class="keyword">var</span> result</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (dwt == z) &#123; result = <span class="literal">true</span> &#125;</span><br><span class="line">      <span class="keyword">if</span> (dwt != z) &#123; result = <span class="literal">false</span> &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> result</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> calculate = <span class="function">(<span class="params">x, y, z</span>) =&gt;</span> &#123;</span><br><span class="line">      x = <span class="keyword">typeof</span> x !== <span class="string">'number'</span> ? <span class="number">0</span> : x</span><br><span class="line">      y = <span class="keyword">typeof</span> y !== <span class="string">'number'</span> ? <span class="number">6</span> : y</span><br><span class="line">      <span class="keyword">return</span> x % y === z</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-数组"><a href="#7-数组" class="headerlink" title="7. 数组"></a>7. 数组</h3><ul>
+<li>1.ES5里面新增的一些东西<ul>
+<li>循环：<br>1.for循环：for(let i = 0; i &lt; arr.length; i++){};<br>2.while循环</li>
+<li>arr.forEach() //代替普通for循环<br>arr.forEach(function(val,index,arr){<br>  comsole.log(val,index,arr);<br>  })</li>
+<li>arr.map()<br>// 非常有用，做数据交互 ‘映射’；<br>//正常情况下，需要配合return，返回一个新数组；<br>// 若是没有return，相当于forEach；<br>// 注意：平常用到map，一定要配合return</li>
+<li>arr.filter()<br>// 过滤，过滤一些不合格的“元素”； 如果函数返回turn，就留下来；</li>
+<li>arr.some()<br>// 类似查找，数组里面某一个元素符合条件，返回turn；</li>
+<li>arr.every()<br>// 数组里面所有元素都要符合条件，才返回turn；<br><strong>注意： 其实他们都可以接受两个参数；<br>   循环回调函数，this指向谁；</strong></li>
+<li>arr.reduce()<br>// 从左往右，求数组的和，阶乘</li>
+<li>arr.reduceRight()<br>// 从右往左，求数组的和，阶乘</li>
+</ul>
+</li>
+<li>ES2017新增一个运算符：<ul>
+<li>幂运算符： Math.pow(2,3)  相当于  2 ** 3；</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>for…of…:<br>  arr.keys()  //数组下标；<br>  arr.entries()  //数组某一项；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> val <span class="keyword">of</span> arr)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(val);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组新增</p>
+</li>
+<li>扩展运算符<ul>
+<li>let arr = [1,2,3];</li>
+<li>let arr2 = […arr];</li>
+<li>let arr2 = Array.from(arr);</li>
+</ul>
+</li>
+<li>Array.from:<ul>
+<li>作用：把类数组（获取一组元素、arguments…）对象转成数组；</li>
+<li>个人观点：具备length这个东西，就靠谱（json没length，但添加后也可使用）；</li>
+</ul>
+</li>
+<li>Array.of(): 把一组值，转成数组；<ul>
+<li>let arr = Array.of(‘a’,’b’,’c’);</li>
+</ul>
+</li>
+<li>arr.find(): 查找，找出一个符合条件的数组成员，如果没有找到，返回undefined；</li>
+<li>arr.findindex():找到的是位置，没找到返回-1；</li>
+<li>arr.fill(): 填充<ul>
+<li>arr.fill(填充的东西，开始位置，结束位置)；</li>
+</ul>
+</li>
+<li>在ES2016里面新增：<ul>
+<li>arr.indexOf();</li>
+<li>arr.includes();</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-对象"><a href="#8-对象" class="headerlink" title="8.对象"></a>8.对象</h3><p>一个不错的ES6教学视频：<a href="http://study.163.com/course/courseMain.htm?courseId=1005211046" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=1005211046</a><br>参考來源：简书；作者：陈嘻嘻啊；链接：<a href="https://www.jianshu.com/p/287e0bb867ae" target="_blank" rel="noopener">https://www.jianshu.com/p/287e0bb867ae</a></p>
 
       
 
@@ -225,11 +314,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
         		</li>
       		
 		</ul>
@@ -298,6 +387,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/05/03/前端编辑器/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          前端编辑器总结
+        
+      </div>
+    </a>
   
   
     <a href="/2018/04/29/整理一些常见的面试题（二）/" id="article-nav-older" class="article-nav-link-wrap">
@@ -432,11 +530,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">知识点</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习进度</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -448,14 +566,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
@@ -464,7 +574,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习进度</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
             <div class="clearfix"></div>

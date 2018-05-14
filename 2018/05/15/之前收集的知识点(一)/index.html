@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>yoona-lin</title>
+  <title>之前收集的知识点(一) | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yoona-lin">
-<meta property="og:url" content="http://github.com/page/2/index.html">
+  <meta name="description" content="前端之JavaScript小结">
+<meta name="keywords" content="知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="之前收集的知识点(一)">
+<meta property="og:url" content="http://github.com/2018/05/15/之前收集的知识点(一)/index.html">
 <meta property="og:site_name" content="yoona-lin">
+<meta property="og:description" content="前端之JavaScript小结">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-14T16:47:58.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yoona-lin">
+<meta name="twitter:title" content="之前收集的知识点(一)">
+<meta name="twitter:description" content="前端之JavaScript小结">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -142,114 +147,40 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-小功能插件代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-之前收集的知识点(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/26/小功能插件代码/">小功能插件</a>
+    <h1 class="article-title" itemprop="name">
+      之前收集的知识点(一)
     </h1>
   
 
          
         
-        <a href="/2018/04/26/小功能插件代码/" class="archive-article-date">
-  	<time datetime="2018-04-26T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+        <a href="/2018/05/15/之前收集的知识点(一)/" class="archive-article-date">
+  	<time datetime="2018-05-15T08:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一些常见的插件功能代码<code>加一个牛逼哄哄的网站</code><br>
-        
-          <a class="article-more-a" href="/2018/04/26/小功能插件代码/#more">more >></a>
-        
-      
+        <p>前端之JavaScript小结<br><a id="more"></a></p>
+<p><span>发布于： 2018.4.13&nbsp;&nbsp; | &nbsp;&nbsp;阅读： 01 &nbsp;&nbsp;| &nbsp;&nbsp;标签： 知识点</span></p>
+<p></p><p style="display: block;margin-bottom: 20px;">经验总结之javascript篇，此篇文章主旨是记录js中常见，易犯错，重要等相关知识点（不定期更新）</p><p></p>
+<h3 id="window-onload和document-ready的区别"><a href="#window-onload和document-ready的区别" class="headerlink" title="window.onload和document.ready的区别"></a>window.onload和document.ready的区别</h3><p></p><p> window.onload是在页面中包含图片在内的素有元素全部加载完成； <br>document.ready是文档结构加载完成，但不包含图片，其他媒体文件； <br>在jQuery中会看到$(function(){})和$(document).ready(function(){})，是在DOM树加载完成之后执行； <br>window.onload是在DOM树加载完以及所有文件加载完成才执行，因此慢于document.ready。</p><p></p>
+<p></p><h4>同步和异步</h4><p></p>
+<p></p><p>同步：由于js单线程，同步任务都在主线程排队执行，前面任务没执行完，后面任务一直等待； <br>异步：不进入主线程，进入任务队列，等待主线程任务执行完成，开始执行。最基础的异步操作setTimeout和setInterval，主线程任务执行完成，开始执行里面的函数</p><p></p>
+<h3 id="返回false的几种情况"><a href="#返回false的几种情况" class="headerlink" title="返回false的几种情况"></a>返回false的几种情况</h3><p></p><p>  false，null，0，“”，undefined，NaN</p><p></p>
+<h3 id="js类型值的区别"><a href="#js类型值的区别" class="headerlink" title="js类型值的区别"></a>js类型值的区别</h3><p></p><p>  存储地： <br>简单数据类型：存储在栈中； <br>引用数据类型：存储在堆中，在栈中存储了指针，指向存储在堆中的地址，解释器会先检索在栈中的地址，从堆中获得实体； <br>大小： <br>简单数据类型：大小固定，占用空间小，频繁使用，所以存储在栈中； <br>引用数据类型：大小不固定，占用空间大；</p><p></p>
+<h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><p></p><p>全局范围：指向window（严格模式下不存在全局变量，指向undefined）; <br>普通函数调用：指向window; <br>对象方法调用：指向最后调用它的对象； <br>构造函数调用：指向new出来的对象； <br>显示设置this：call，apply方法显示将this指向第一个参数指明的对象；</p><p></p>
+<h3 id="new具体做了些什么"><a href="#new具体做了些什么" class="headerlink" title="new具体做了些什么"></a>new具体做了些什么</h3><p></p><p> 创建一个新对象foo；<br>并将它的<strong>proto</strong>指向其构造函数的prototype，foo.<strong>proto</strong> = Foo.prototype;<br>动态将this指向新对象，Foo.apply(foo，arguments);<br>执行函数体中的代码；<br>放回新对象foo;</p><p></p>
+<h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><p></p><p> 创建一个函数就会为其创建一个prototype属性，指向这个函数的原型对象，原型对象会自动获得constructor属性，指向prototype属性所在函数。<br></p>
+<div style="font-size: 12px;color: #000;border:1px solid #e8e0e0"><br><br>Function.prototype.a = “a”;    <br>Object.prototype.b = “b”;    <br>function Person(){}    <br>console.log(Person);    //function Person()    <br>let p = new Person();    <br>console.log(p);         //Person {} 对象    <br>console.log(p.a);       //undefined    <br>console.log(p.b);       //b<br></div><br><p></p><br>p.<strong>proto</strong> === Person.prototype；Person.prototype.constructor === Person<br><p>当调用某种方法或查找某种属性时，首先会在自身调用和查找，如果自身并没有该属性或方法，则会去它的<strong>proto</strong>属性中调用查找，也就是它构造函数的prototype中调用查找，如果构造函数中也没有该属性方法，则会去构造函数的隐式原型中查找，一直到null，就这样形成原型链。</p><br>### 数组去重<br><div><br>  var arr = [‘a’,’bb’,’22’,’a’,’yuci’,’haha’,’22’];<br></div><br><p> 1. es6的set()方法 </p><br><div><br>  var unique = new Set(arr);  <br>console.log(Array.from(unique));<br></div><br><p>  2. 使用push() </p><br><div><br>  var arr2 = [];  <br>for(var i = 0; i &lt; arr.length; i++) {  <br>&nbsp;&nbsp;&nbsp;&nbsp;(function(i) {  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(arr2.indexOf(arr[i]) == -1) { //不包含某个值则返回-1  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr2.push(arr[i]);  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}(i))  <br>}  <br>console.log(arr2);<br></div><br><div><br>  //如果当前数组的第i项在当前数组中第一次出现的位置不是i，那么表示第i项是重复的，忽略掉。否则存入结果数组  <br>var arr3 = [arr[0]];<br>for(var i = 1; i &lt; arr.length; i++) {  <br>&nbsp;&nbsp;&nbsp;&nbsp;(function(i) {  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(arr.indexOf(arr[i]) == i) {  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr3.push(arr[i]);  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}  <br>&nbsp;&nbsp;&nbsp;&nbsp;}(i))  <br>}  <br>console.log(arr3);<br></div><br><p> 3. 排序去除相邻重复元素</p><br><div><br>  <pre>var arrSort = arr.sort();<br>var arr4 = [];<br>for(let i = 0; i&lt; arrSort.length; i++) {<br>if(arrSort[i] != arrSort[i+1]) {<br>arr4.push(arrSort[i]);<br>}<br>}<br>console.log(arr4);  </pre><br></div><br><p> 4. 使用splice()</p><br><div><br>  <pre>var len = arr.length;<br>for(let i = 0; i &lt; len; i++) {<br>for(let j = i + 1; j &lt; len; j++) {<br>if(arr[i] === arr[j]) {<br>    arr.splice(i,1);<br>    len–;<br>    j–;<br>}<br>}<br>}<br>console.log(arr);  </pre><br></div><br><h4>事件委托</h4><br><p> 创建一个函数就会为其创建一个prototype属性，指向这个函数的原型对象，原型对象会自动获得constructor属性，指向prototype属性所在函数。</p><br><div><br><pre>var oUl = document.getElementById(‘oul’);<br>oUl.addEventListener(‘click’, function(e) {<br>var e = e||window.event;<br>var tar = e.target;<br>if(tar.nodeName === ‘LI’) {<br>    alert(tar.innerHTML);<br>}<br>})  </pre><br></div><br><h4>闭包</h4><br><p>  何为闭包：有权访问另一个作用域中变量的函数<br>闭包特性：可实现函数外访问函数内变量，外层变量可以不被垃圾回收机制回收<br>为什么？怎么解决？</p><br><div><br><pre>for(var i = 0; i &lt; 10; i++) {<br>setTimeout(function() {<br>console.log(i);<br>}, 1000);<br>}   </pre></div><br><p>输出结果都为10，因为for()循环过程中每次传值，匿名函数并没有执行，相当于执行10次function(){console.log(i);}，循环结束i变为10，所以输出全部为10</p><br><p>使用闭包，自执行匿名函数包裹</p><br><div><br><pre>for(var i = 0; i &lt; 10; i++) {<br>(function(j) {<br>setTimeout(function() {<br>    console.log(j);<br>}, 1000);<br>})(i);<br>}  </pre></div><br><p>外部匿名函数立即执行，把 i 作为参数，赋值给 j ，因为是立即执行，所以每次循环输出不同值。</p><br><p>引用外层变量不被回收，会相比其他函数占用更高内存，使用不当容易造成内存泄漏。</p><br><h4>继承方式</h4><br><p> Child()的原型作为Parent()的实例来继承Parent()的方法属性. <br>  因为所有实例都继承原型方法属性，其中一个实例对原型属性值更改后，所有实例调用该属性的值全部更改</p><br><div><br><pre>function Parent() {}<br>Parent.prototype.parentSay = function() {<br>return ‘i am parent’;<br>}<br>function Child() {}<br>Child.prototype.childSay = function() {<br>return ‘i am child’;<br>}<br>Child.prototype = new Parent();<br>var par = new Parent();<br>var kid = new Child();<br><br>console.log(kid.parentSay());           //i am parent  </pre><br></div><br><p>构造函数继承：<br>在子类的构造函数内部通过call或apply来调用父类构造函数 <br>无法实现函数的复用</p><br><div><br><pre>function People() {<br>this.name = [‘zhangsan’,’lisi’,’wangwu’];<br>}<br>function Person() {<br>People.call(this);<br>}<br>var per1 = new Person();<br>per1.name.push(‘zhanliu’);<br>console.log(per1.name);     //[“zhangsan”, “lisi”, “wangwu”, “zhanliu”]<br><br>var per2 = new Person();<br>console.log(per2.name);     //[“zhangsan”, “lisi”, “wangwu”]  </pre><br></div><br><p>组合继承： <br>将原型链继承和构造函数继承结合，最常用的继承模式 <br>原型链继承共享的属性和方法，构造函数继承实例属性</p><br><div><br><pre>function People(num) {<br>this.num = num;<br>this.name = [‘zhangsan’,’lisi’,’wangwu’];<br>}<br>People.prototype.numCount = function() {<br>console.log(this.num);<br>}<br>function Person(num) {<br>People.call(this, num);<br>}<br>//继承方式<br>Person.prototype = new People();<br>Person.prototype.constructor = Person;<br><br>var per1 = new Person(10);<br>per1.name.push(‘zhaoliu’);<br>console.log(per1.name);     //[“zhangsan”, “lisi”, “wangwu”, “zhanliu”]<br>per1.numCount();            //10<br><br>var per2 = new Person(20);<br>console.log(per2.name);     //[“zhangsan”, “lisi”, “wangwu”]<br>per2.numCount();            //20  </pre><br></div><br><h4>数组常用方法</h4><br><p> 改变原数组： <br>尾部删除pop()，尾部添加push()，头部删除shift()，头部添加unshift()，排序sort()，颠倒数组元素reverse()，删除或插入元素splice(); <br>不会改变元素组： <br>合并数组concat()，拼接数组元素join()，截取元素slice()，indexOf()，lastIndexOf()，toString()</p><br><h4>数据存储</h4><br><p> Cookie：用于客户端与服务端通信，也具有本地存储的功能 <br>localStorage，sessionStorage：专门用于存储<br>区别： <br>大小：Cookie容量为4K，因为用于客户端与服务端通信，所有http都携带，如果太大会降低效率； localStorage，sessionStorage大小为5M。 <br>失效时间：Cookie会在浏览器关闭时删除，除非主动设置删除时间；localStorage一直都在直到用户主动删除或清除浏览器缓存；sessionStorage在浏览器关闭时删除</p><br><h4>结束语</h4><br><p>多看看，多记忆</p><br>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小插件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">codepen</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/26/小功能插件代码/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/25/hexo搭建个人博客总结（三）/">hexo搭建个人博客总结（三）</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/25/hexo搭建个人博客总结（三）/" class="archive-article-date">
-  	<time datetime="2018-04-24T17:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>为自己的博客搭建更多功能</p>
-        
-          <a class="article-more-a" href="/2018/04/25/hexo搭建个人博客总结（三）/#more">more >></a>
-        
       
 
       
@@ -271,16 +202,84 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/25/hexo搭建个人博客总结（三）/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/05/15/之前收集的知识点(一)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/05/15/之前收集的知识点(二)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          之前收集的知识点(二)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/04/整理一些常见的面试题（四）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题整理（html、css篇）（四）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -300,480 +299,14 @@ var _hmt = _hmt || [];
 
 
 
-
-  
-    <article id="post-jQuery-UI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/jQuery-UI/">jQuery-UI学习进度</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/24/jQuery-UI/" class="archive-article-date">
-  	<time datetime="2018-04-23T16:22:52.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>jQueryUI 是以 jQuery 为基础的开源 JavaScript 网页用户界面代码库。<br>
-        
-          <a class="article-more-a" href="/2018/04/24/jQuery-UI/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习进度</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/24/jQuery-UI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/23/hexo搭建个人博客总结（二）/">hexo搭建个人博客总结（二）</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/23/hexo搭建个人博客总结（二）/" class="archive-article-date">
-  	<time datetime="2018-04-23T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo搭建个人博客总结–进阶<br>
-        
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结（二）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结（二）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/23/hexo搭建个人博客总结/">hexo搭建个人博客总结</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/23/hexo搭建个人博客总结/" class="archive-article-date">
-  	<time datetime="2018-04-23T08:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="下载与安装git与node-js"><a href="#下载与安装git与node-js" class="headerlink" title="下载与安装git与node.js"></a>下载与安装git与node.js</h3><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
-        
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Markdowm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/22/Markdowm/">Markdowm</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/22/Markdowm/" class="archive-article-date">
-  	<time datetime="2018-04-22T08:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h4>概述</h4><br>Markdown 的目标是实现「易读易写」。<br>
-        
-          <a class="article-more-a" href="/2018/04/22/Markdowm/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/22/Markdowm/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-搞定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/21/搞定/">基本搞定博客</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h3>露出老母亲般欢喜的笑容</h3><p></p>
-<p>烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！</p>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/21/搞定/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-原文档--Markdowm语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/20/原文档--Markdowm语法/">原文档--Markdowm语法</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/20/原文档--Markdowm语法/" class="archive-article-date">
-  	<time datetime="2018-04-19T17:31:43.804Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome<br>
-        
-          <a class="article-more-a" href="/2018/04/20/原文档--Markdowm语法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">杂集合</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/20/原文档--Markdowm语法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -801,8 +334,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

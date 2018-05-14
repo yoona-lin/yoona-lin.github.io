@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://github.com">
-  <title>yoona-lin</title>
+  <title>面试题整理（html、css篇）（四） | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yoona-lin">
-<meta property="og:url" content="http://github.com/page/2/index.html">
+  <meta name="description" content="参考不少的网站，总结出下面一些知识点，多了解了解、、、">
+<meta name="keywords" content="知识点,面试题,html,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题整理（html、css篇）（四）">
+<meta property="og:url" content="http://github.com/2018/05/04/整理一些常见的面试题（四）/index.html">
 <meta property="og:site_name" content="yoona-lin">
+<meta property="og:description" content="参考不少的网站，总结出下面一些知识点，多了解了解、、、">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201503/10153449_ZoQu.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201503/10153449_0pQu.gif">
+<meta property="og:image" content="https://static.oschina.net/uploads/img/201503/10153449_7dQk.gif">
+<meta property="og:updated_time" content="2018-05-05T03:33:15.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yoona-lin">
+<meta name="twitter:title" content="面试题整理（html、css篇）（四）">
+<meta name="twitter:description" content="参考不少的网站，总结出下面一些知识点，多了解了解、、、">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/img/201503/10153449_ZoQu.png">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -142,578 +151,85 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-小功能插件代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-整理一些常见的面试题（四）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/26/小功能插件代码/">小功能插件</a>
+    <h1 class="article-title" itemprop="name">
+      面试题整理（html、css篇）（四）
     </h1>
   
 
          
         
-        <a href="/2018/04/26/小功能插件代码/" class="archive-article-date">
-  	<time datetime="2018-04-26T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
+        <a href="/2018/05/04/整理一些常见的面试题（四）/" class="archive-article-date">
+  	<time datetime="2018-05-03T16:10:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一些常见的插件功能代码<code>加一个牛逼哄哄的网站</code><br>
-        
-          <a class="article-more-a" href="/2018/04/26/小功能插件代码/#more">more >></a>
-        
-      
+        <p>参考不少的网站，总结出下面一些知识点，多了解了解、、、<br><a id="more"></a></p>
+<h3 id="1-CSS盒子模型"><a href="#1-CSS盒子模型" class="headerlink" title="1.CSS盒子模型"></a>1.CSS盒子模型</h3><ul>
+<li>内容(content)、填充(padding)、边框(border)、边界(margin)</li>
+<li>Box Model叫盒子模型（或框模型），Box Model规定了元素框处理元素内容（element content）、内边距（padding）、边框（border） 和 外边距（margin） 的方式。在HTML文档中，每个元素（element）都有盒子模型，所以说在Web世界里（特别是页面布局），Box Model无处不在。</li>
+<li>Box-Model 1<br><img src="https://static.oschina.net/uploads/img/201503/10153449_ZoQu.png" alt="" title="Box-Model 1"><br>1.由内而外依次是元素内容（content）、内边矩（padding-top、padding-right、padding- bottom、padding-left）、边框（border-top、border-right、border-bottom、border- left）和外边距（marging-top、margin-right、margin-bottom、margin-left）;<br>2.内边距、边框和外边距可以应用于一个元素的所有边，也可以应用于单独的边。而且，外边距可以是负值，而且在很多情况下都要使用负值的外边距。</li>
+<li>W3School的Box Model 2<br><img src="https://static.oschina.net/uploads/img/201503/10153449_0pQu.gif" alt="" title="Box-Model 2"><br>1.元素框的最内部分是实际的内容（element）；直接包围内容的是内边距（padding），内边距呈现了元 素的背景（background）；内边距的边缘是边框（border）；边框以外是外边距（margin），外边距默认是透明的，因此不会遮挡其后的任 何元素（其实元素的margin就是其所在父元素的padding）。元素的背景应用于由内容和内边距、边框组成的区域。<br>2.内边距、边框和外边距都是可选的，默认值是零。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器 <em>`（</em>）`对所有元素进行设置：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*设置所有元素的外边距和内边矩为0*/</span>* &#123;</span><br><span class="line">  margin: <span class="number">0</span>;</span><br><span class="line">  padding: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>3.在 CSS 中，width 和 height 指的是内容区域（element）的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。假设框的每个边上有 10 个像素的外边距和 5 个像素的内边距。如果希望这个元素框达到 100 个像素，就需要将内容的宽度设置为 70 像素，以下是CSS代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">  width: <span class="number">70</span>px;</span><br><span class="line">  margin: <span class="number">10</span>px;</span><br><span class="line">  padding: <span class="number">5</span>px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如下图：<br><img src="https://static.oschina.net/uploads/img/201503/10153449_7dQk.gif" alt="" title="描述"><br>参考网站：<a href="https://my.oschina.net/sheila/blog/384806" target="_blank" rel="noopener">https://my.oschina.net/sheila/blog/384806</a></p>
+<h3 id="2-HTML语义化"><a href="#2-HTML语义化" class="headerlink" title="2.HTML语义化"></a>2.HTML语义化</h3><ul>
+<li>按照人们的思考逻辑命名，不但要自己能看懂，也要让别人也能看懂，不要让别人觉得你的代码很乱。语义化的主要目的就是让大家<code>直观的认识标签(markup)和属性(attribute)的用途和作用</code>。<br>语义化的网页的好处，最主要的就是对搜索引擎友好，有了良好的结构和语义你的网页内容自然容易被搜索引擎抓取，你网站的推广便可以省下不少的功夫。语义 Web 技术有助于利用基于开放标准的技术，从数据、文档内容或应用代码中分离出意义。</li>
+<li>语义化命名：<ul>
+<li>文件命名：main.css（主要的文件）</li>
+<li>注释命名：<pre>
+/* Footer */
+内容区
+/* End Footer */（主要的文件）*
+</pre></li>
+<li>id命名： 页头：header；内容：content/container</li>
+<li>class命名： ”类别+功能/分类”命名；.titleBar-news{ }/<em>新闻标题栏</em>/*</li>
+<li>更多请参考：<a href="https://blog.csdn.net/chelen_jak/article/details/24870047" target="_blank" rel="noopener">CSS语义化命名及常用命名规则（推荐）</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-div水平居中"><a href="#3-div水平居中" class="headerlink" title="3.div水平居中"></a>3.div水平居中</h3><ul>
+<li>知道DIV的自身长度和宽度：<ul>
+<li>首们需要position:absolute;绝对定位。</li>
+<li>而层的定位点，使用外补丁margin负值的方法。负值的大小为层自身宽度高度除以二，[style=”position: absolute;top:50%;left: 50%”]只能实现DIV离左边框和上边框的距离为屏幕的物理尺寸的一半，忽略了DIV本身的长度和宽度，所以不会实现DIV的水平垂直居中。</li>
+</ul>
+</li>
+<li><p>不知道DIV的本身长度和宽度时:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">window</span>).load(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            $(<span class="string">".mydiv"</span>).css(&#123;</span><br><span class="line">                position: <span class="string">"absolute"</span>,</span><br><span class="line">                left: ($(<span class="built_in">window</span>).width() - $(<span class="string">".mydiv"</span>).width())/<span class="number">2</span>,</span><br><span class="line">                top: ($(<span class="built_in">window</span>).height() - $(<span class="string">".mydiv"</span>).height())/<span class="number">2</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>div绝对定位水平垂直居中【margin:auto实现绝对定位元素的居中】</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">            width: <span class="number">200</span>px;</span><br><span class="line">            height: <span class="number">200</span>px;</span><br><span class="line">            background: green;</span><br><span class="line">            position:absolute;</span><br><span class="line">            left:<span class="number">0</span>;</span><br><span class="line">            top: <span class="number">0</span>;</span><br><span class="line">            bottom: <span class="number">0</span>;</span><br><span class="line">            right: <span class="number">0</span>;</span><br><span class="line">            margin: auto;</span><br><span class="line">        &#125;    <span class="comment">//兼容性：,IE7及之前版本不支持</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>div绝对定位<code>水平垂直居中`</code>【Transforms 变形】`</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">            width: <span class="number">200</span>px;</span><br><span class="line">            height: <span class="number">200</span>px;</span><br><span class="line">            background: green;</span><br><span class="line">            position:absolute;</span><br><span class="line">            left:<span class="number">50</span>%;    <span class="comment">/* 定位父级的50% */</span></span><br><span class="line">            top:<span class="number">50</span>%;</span><br><span class="line">            transform: translate(<span class="number">-50</span>%,<span class="number">-50</span>%); <span class="comment">/*自己的50% */</span></span><br><span class="line">        &#125;     <span class="comment">//兼容性：IE8不支持；</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>css<code>不定宽高</code>     <code>水平垂直居中</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.box&#123;</span><br><span class="line"></span><br><span class="line">             height:<span class="number">600</span>px;</span><br><span class="line">             display:flex;</span><br><span class="line">             justify-content:center;</span><br><span class="line">             align-items:center;</span><br><span class="line">               <span class="comment">/* aa只要三句话就可以实现不定宽高水平垂直居中。 */</span></span><br><span class="line">        &#125;</span><br><span class="line">        .box&gt;div&#123;</span><br><span class="line">            background: green;</span><br><span class="line">            width: <span class="number">200</span>px;</span><br><span class="line">            height: <span class="number">200</span>px;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-div垂直居中"><a href="#4-div垂直居中" class="headerlink" title="4.div垂直居中"></a>4.div垂直居中</h3><ul>
+<li><p>1.绝对定位的 div，把它的 top 设置为 50％，top margin 设置为负的 content 高度。这意味着对象必须在 CSS 中指定固定的高度。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"content"</span>&gt; Content goes here&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">#content &#123;</span></span><br><span class="line"><span class="regexp">    position: absolute;</span></span><br><span class="line"><span class="regexp">    top: 50%;</span></span><br><span class="line"><span class="regexp">    height: 240px;</span></span><br><span class="line"><span class="regexp">    margin-top: -120px; /</span>* negative half <span class="keyword">of</span> the height *<span class="regexp">/</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.使用 <code>margin:auto;</code>使块级元素垂直居中:使用了一个 <code>position:absolute，</code>有固定宽度和高度的 div。这个 div 被设置为 <code>top:0; bottom:0;</code>。但是因为它有固定高度，其实并不能和上下都间距为 0，因此 <code>margin:auto;</code> 会使它居中.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"content"</span>&gt; Content here&lt;<span class="regexp">/div&gt;  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">#content &#123;</span></span><br><span class="line"><span class="regexp">    position: absolute;</span></span><br><span class="line"><span class="regexp">    top: 0;</span></span><br><span class="line"><span class="regexp">    bottom: 0;</span></span><br><span class="line"><span class="regexp">    left: 0;</span></span><br><span class="line"><span class="regexp">    right: 0;</span></span><br><span class="line"><span class="regexp">    margin: auto;</span></span><br><span class="line"><span class="regexp">    height: 240px;</span></span><br><span class="line"><span class="regexp">    width: 70%;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.<code>单行文本置中</code>:把 line-height 设置为那个对象的 height 值就可以使文本居中了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"content"</span>&gt; Content here&lt;<span class="regexp">/div&gt;  </span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">#content &#123;</span></span><br><span class="line"><span class="regexp">    height: 100px;</span></span><br><span class="line"><span class="regexp">    line-height: 100px;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="HTML5一个新增属性————-data-自定义属性"><a href="#HTML5一个新增属性————-data-自定义属性" class="headerlink" title="HTML5一个新增属性———— data- 自定义属性"></a>HTML5一个新增属性———— data- 自定义属性</h3><p>在HTML5中我们可以使用以 data- 为前缀来设置我们需要的自定义属性，来进行一些数据的存放。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id = <span class="string">"user"</span> data-uid = <span class="string">"12345"</span> data-uname = <span class="string">"愚人码头"</span> &gt; &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用getAttribute获取 data- 属性</span></span><br><span class="line"><span class="keyword">var</span> user = <span class="built_in">document</span> . getElementById ( <span class="string">'user'</span> ) ;</span><br><span class="line"><span class="keyword">var</span> userName =user . getAttribute ( <span class="string">'data-uname'</span> ) ; <span class="comment">// userName = '愚人码头'</span></span><br><span class="line"><span class="keyword">var</span> userId = user . getAttribute ( <span class="string">'data-uid'</span> ) ; <span class="comment">// userId = '12345'</span></span><br><span class="line"></span><br><span class="line">使用setAttribute设置 data- 属性</span><br><span class="line">user . setAttribute ( <span class="string">'data-site'</span> , <span class="string">'http://www.css88.com'</span> ) ;</span><br></pre></td></tr></table></figure></p>
+<p>参考网站：<a href="https://www.qdfuns.com/article/44791/edb15b7b6a931231751651fbab1c11b7.html" target="_blank" rel="noopener">https://www.qdfuns.com/article/44791/edb15b7b6a931231751651fbab1c11b7.html</a></p>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">小插件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">codepen</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/26/小功能插件代码/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结（三）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/25/hexo搭建个人博客总结（三）/">hexo搭建个人博客总结（三）</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/25/hexo搭建个人博客总结（三）/" class="archive-article-date">
-  	<time datetime="2018-04-24T17:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>为自己的博客搭建更多功能</p>
-        
-          <a class="article-more-a" href="/2018/04/25/hexo搭建个人博客总结（三）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/25/hexo搭建个人博客总结（三）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-jQuery-UI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/24/jQuery-UI/">jQuery-UI学习进度</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/24/jQuery-UI/" class="archive-article-date">
-  	<time datetime="2018-04-23T16:22:52.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>jQueryUI 是以 jQuery 为基础的开源 JavaScript 网页用户界面代码库。<br>
-        
-          <a class="article-more-a" href="/2018/04/24/jQuery-UI/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习进度</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/24/jQuery-UI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/23/hexo搭建个人博客总结（二）/">hexo搭建个人博客总结（二）</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/23/hexo搭建个人博客总结（二）/" class="archive-article-date">
-  	<time datetime="2018-04-23T13:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo搭建个人博客总结–进阶<br>
-        
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结（二）/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结（二）/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo搭建个人博客总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/23/hexo搭建个人博客总结/">hexo搭建个人博客总结</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/23/hexo搭建个人博客总结/" class="archive-article-date">
-  	<time datetime="2018-04-23T08:42:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="下载与安装git与node-js"><a href="#下载与安装git与node-js" class="headerlink" title="下载与安装git与node.js"></a>下载与安装git与node.js</h3><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
-        
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/23/hexo搭建个人博客总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Markdowm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/22/Markdowm/">Markdowm</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/22/Markdowm/" class="archive-article-date">
-  	<time datetime="2018-04-22T08:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h4>概述</h4><br>Markdown 的目标是实现「易读易写」。<br>
-        
-          <a class="article-more-a" href="/2018/04/22/Markdowm/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">知识点</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/22/Markdowm/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-搞定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/21/搞定/">基本搞定博客</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/21/搞定/" class="archive-article-date">
-  	<time datetime="2018-04-21T09:44:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p></p><h3>露出老母亲般欢喜的笑容</h3><p></p>
-<p>烦烦躁躁还是成功了，得到的经验就是要多查百度，笔记也是要记下的，不然老是要去重新查找，是有点费时间的，继续加油！！！</p>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/21/搞定/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-原文档--Markdowm语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/20/原文档--Markdowm语法/">原文档--Markdowm语法</a>
-    </h1>
-  
-
-         
-        
-        <a href="/2018/04/20/原文档--Markdowm语法/" class="archive-article-date">
-  	<time datetime="2018-04-19T17:31:43.804Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome<br>
-        
-          <a class="article-more-a" href="/2018/04/20/原文档--Markdowm语法/#more">more >></a>
-        
       
 
       
@@ -730,7 +246,15 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">杂集合</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">面试题</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -739,16 +263,84 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/20/原文档--Markdowm语法/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://github.com/2018/05/04/整理一些常见的面试题（四）/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/05/15/之前收集的知识点(一)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          之前收集的知识点(一)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/05/03/整理一些常见的面试题（三）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题整理（js篇）（三）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -768,12 +360,14 @@ var _hmt = _hmt || [];
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -801,8 +395,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
