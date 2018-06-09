@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Resume(简历封面)</title>
+  <style media="screen">
+  body{
+    margin: 0;
+    padding: 0;
+    /* height:500px; */
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  img{
+    opacity: 0.8;
+    width: 100%;
+    height:660px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .contain{
+    position: absolute;
+    top: 22%;
+    left: 26%;
+  }
+  .text{
+    font-size: 4em;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .contain-text{
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .name{
+    font-size: 3em;
+    border:1px solid rgb(232, 229, 219);
+    border-radius: 20px ;
+    background: rgba(232, 229, 219,0.8);
+    margin-left: 30px;
+    margin-top: 0px;
+    width: 360px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    transition: 0.8s;
+  }
+  .decoration{
+    font-size: 1.2em;
+    color: rgb(85, 83, 83);
+    border:1px solid rgb(232, 229, 219);
+    border-radius: 0 0 20px 20px;
+    background: rgba(214, 213, 210, 0.6);
+    margin-left: 30px;
+    margin-top: -300px;
+    width: 360px;
+    height: 60px;
+    transition: 0.5s;
+    text-align: center;
+  }
+  .name:hover{
+    border-radius: 20px 20px 0 0;
+    background: rgba(140, 136, 135,0.9);
+  }
+  .contain-text:hover .decoration{
+    margin-top: 0px;
+
+  }
+  .name span{
+    font-size: 0.6em;
+  }
+
+  @media (max-width:890px){
+  	body{
+  		padding: 0;
+  		background: #9e9d9d;
+  	}
+    .text{
+      font-size:3em;
+    }
+    .name{
+      font-size: 2em;
+      border-radius: 20px;
+      margin-left: 20px;
+      width: 260px;
+      height: 80px;
+      line-height: 80px;
+      transition: 0.3s;
+    }
+    .name span{
+      font-size: 0.4em;
+    }
+    .contain{
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+    .contain-text{
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+    }
+    .decoration{
+      font-size: 0.8em;
+      color: rgb(85, 83, 83);
+      border:1px solid rgb(232, 229, 219);
+      border-radius: 0 0 20px 20px;
+      background: rgba(214, 213, 210, 0.6);
+      margin-left: 20px;
+      margin-top: -300px;
+      width: 260px;
+      height: 60px;
+      transition: 0.5s;
+      text-align: center;
+    }
+  }
+  @media (max-width:430px){
+    .text{
+      font-size: 2em;
+    }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="">
+    <img src="http://p7sh0ytqi.bkt.clouddn.com/cover.jpg" alt="">
+    <div class="contain">
+      <p class="text">Welcome to</p>
+      <div class="contain-text">
+        <a href="Resume.html">
+          <div class="name">
+            林泽坚
+            <span>个人简历</span>
+          </div>
+        </a>
+        <div class="decoration">
+          这是林泽坚个人简历封面图 <br>点击查看更多信息！
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

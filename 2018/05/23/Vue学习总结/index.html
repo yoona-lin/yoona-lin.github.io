@@ -16,10 +16,14 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="Vue是一套用于构建用户界面的渐进式框架">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-05-23T03:35:18.470Z">
+<meta property="og:image" content="http://github.com/img//Vue文件.png">
+<meta property="og:image" content="http://github.com/img//Vue文件夹-main.js.png">
+<meta property="og:image" content="http://github.com/img//Vue文件夹-App.vue.png.png">
+<meta property="og:updated_time" content="2018-05-28T10:32:05.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习总结">
 <meta name="twitter:description" content="Vue是一套用于构建用户界面的渐进式框架">
+<meta name="twitter:image" content="http://github.com/img//Vue文件.png">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -170,6 +174,18 @@ var _hmt = _hmt || [];
       
         <p>Vue是一套用于构建用户界面的渐进式框架<br><a id="more"></a></p>
 <h3 id="1-Vue官网"><a href="#1-Vue官网" class="headerlink" title="1.Vue官网"></a>1.Vue官网</h3><p><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue官网</a><br><a href="https://www.w3cschool.cn/vuejs/" target="_blank" rel="noopener">w3c Vue教程</a><br>先看官网的知识流程跟着学习，之后再去看一些视频；</p>
+<h3 id="2-Vue安装"><a href="#2-Vue安装" class="headerlink" title="2.Vue安装"></a>2.Vue安装</h3><ul>
+<li>1.基于git下的安装<br>参考网站：<a href="https://segmentfault.com/a/1190000008922234" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008922234</a></li>
+<li>2.通过cmd命令提示符<br>参考网站：<a href="http://www.cnblogs.com/ganmy/p/6029774.html" target="_blank" rel="noopener">http://www.cnblogs.com/ganmy/p/6029774.html</a></li>
+<li><p>3.html中文件引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指令总结：<br>1.新建项目：vue init webpack vue_test(项目文件夹名)<br>2.进入项目文件夹：cd vue_test（项目名），回车<br>3.安装依赖文件：cnpm install<br>4.运行（打开）服务器：cnpm run dev（或 npm run dev）<br>5.查看：浏览里输入：localhost:8080(默认端口为8080)（或 localhost:8081)<br>6.停止、关闭：Ctrl+c<br>7.配置刷新：即先停止服务器、再重启</p>
+</li>
+</ul>
+<h3 id="3-Vue安装后文件夹介绍"><a href="#3-Vue安装后文件夹介绍" class="headerlink" title="3.Vue安装后文件夹介绍"></a>3.Vue安装后文件夹介绍</h3><p>1.<br><img src="/img//Vue文件.png" alt="Vue文件简介" title="描述"><br>2.<br><img src="/img//Vue文件夹-main.js.png" alt="Vue文件-main.js简介" title="描述"><br>3.<br><img src="/img//Vue文件夹-App.vue.png.png" alt="Vue文件夹-App.vue简介" title="描述"><br>4.组件模板<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"users"</span>&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">"users"</span>,</span><br><span class="line">    data()&#123;</span><br><span class="line">      <span class="keyword">return</span> &#123;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style scoped&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure></p>
+<p>5.炸了<br>不知道哪里出问题了,本地服务器打不开,瞎搞之后更糟,准备重装了(笑脸)</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>。。。</p>
 
       
 
@@ -260,6 +276,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/06/09/个人简历封面/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          个人简历
+        
+      </div>
+    </a>
   
   
     <a href="/2018/05/23/前端学习路线/" id="article-nav-older" class="article-nav-link-wrap">
@@ -411,6 +436,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
               </li>
              
               <li class="article-tag-list-item">
