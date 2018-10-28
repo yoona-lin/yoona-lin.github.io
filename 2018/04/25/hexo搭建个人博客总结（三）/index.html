@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://p7sh0ytqi.bkt.clouddn.com/5.jpg">
 <meta property="og:image" content="http://ou36vgj5u.bkt.clouddn.com/image/blog/hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--%E6%B7%B1%E5%85%A5%E7%AF%87/count-2.png">
 <meta property="og:image" content="http://ou36vgj5u.bkt.clouddn.com/image/blog/hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--%E6%B7%B1%E5%85%A5%E7%AF%87/count-1.png">
-<meta property="og:updated_time" content="2018-04-27T04:04:24.256Z">
+<meta property="og:updated_time" content="2018-10-28T03:12:52.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建个人博客总结（三）">
 <meta name="twitter:description" content="为自己的博客搭建更多功能">
@@ -200,11 +200,11 @@ var _hmt = _hmt || [];
 </li>
 <li><p>3.预览效果为：<br><img src="http://ou36vgj5u.bkt.clouddn.com/image/blog/hexo+github%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2--%E6%B7%B1%E5%85%A5%E7%AF%87/count-2.png"></p>
 </li>
-<li><p>4.在文章标题后面显示文章的访问量，在\themes\yilia\layout_partial下的article.ejs中的以下位置加入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;header class=&quot;article-header&quot;&gt;</span><br><span class="line">&lt;%- partial(&apos;post/title&apos;, &#123;class_name: &apos;article-title&apos;&#125;) %&gt;</span><br><span class="line">&lt;% if (theme.page_count &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">  &lt;/br&gt;</span><br><span class="line">  &lt;a class=&quot;article-count-a-tag&quot; href=&quot;javascript:void(0);&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span id=&quot;busuanzi_container_page_pv&quot; class=&quot;article-count-a-span&quot;&gt;</span><br><span class="line">            被偷看了：&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">&lt;% &#125; %&gt; </span><br><span class="line">&lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">&lt;%- partial(&apos;post/date&apos;, &#123;class_name: &apos;archive-article-date&apos;, date_format: null&#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;/header&gt;</span><br></pre></td></tr></table></figure>
+<li><p>4.在文章标题后面显示文章的访问量，在<code>\themes\yilia\layout\_partial下的article.ejs</code>中的以下位置加入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;header class=&quot;article-header&quot;&gt;</span><br><span class="line">&lt;%- partial(&apos;post/title&apos;, &#123;class_name: &apos;article-title&apos;&#125;) %&gt;</span><br><span class="line">&lt;% if (theme.page_count &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">  &lt;/br&gt;</span><br><span class="line">  &lt;a class=&quot;article-count-a-tag&quot; href=&quot;javascript:void(0);&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span id=&quot;busuanzi_container_page_pv&quot; class=&quot;article-count-a-span&quot;&gt;</span><br><span class="line">            被偷看了：&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">&lt;%- partial(&apos;post/date&apos;, &#123;class_name: &apos;archive-article-date&apos;, date_format: null&#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;/header&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>5.此处有一个小细节就是判断条件中加入 !index 判断条件，在主页时不显示，点击进入某文章时才显示统计的效果，最后还需要在…\themes\yilia\source的main.css中加入自定义的class，我定义的为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.article-count-a-tag&#123;color:gray;font-size:14px;&#125; </span><br><span class="line">.article-count-a-span&#123;color:#ef7522;font-size:14px;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.article-count-a-tag&#123;color:gray;font-size:14px;&#125;</span><br><span class="line">.article-count-a-span&#123;color:#ef7522;font-size:14px;&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>6.最终效果为：</p>
@@ -440,11 +440,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ASP.NET</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">.NET.Core</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小练习</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ASP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,10 +492,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -480,23 +500,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
+                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -508,19 +516,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,7 +540,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
             
             <div class="clearfix"></div>
