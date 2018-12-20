@@ -16,10 +16,18 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="hexo搭建个人博客总结–继续补充加强（统计功能与评论功能）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T17:51:01.876Z">
+<meta property="og:image" content="http://github.com/img/百度统计界面.png">
+<meta property="og:image" content="http://github.com/img/来必力注册1.png">
+<meta property="og:image" content="http://github.com/img/来必力注册2.png">
+<meta property="og:image" content="http://github.com/img/来必力代码1.png">
+<meta property="og:image" content="http://github.com/img/来必力代码3.png">
+<meta property="og:image" content="http://github.com/img/来必力代码2.png">
+<meta property="og:image" content="http://github.com/img/来必力效果图.png">
+<meta property="og:updated_time" content="2018-12-20T19:58:03.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建个人博客总结（5）">
 <meta name="twitter:description" content="hexo搭建个人博客总结–继续补充加强（统计功能与评论功能）">
+<meta name="twitter:image" content="http://github.com/img/百度统计界面.png">
   
   
     <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
@@ -45,6 +53,8 @@
 	</script>
 
 
+
+  
 
 </head>
 
@@ -159,7 +169,7 @@
     </h1>
   
 
-         
+        
         
         <a href="/2018/12/21/hexo搭建个人博客总结（五）/" class="archive-article-date">
   	<time datetime="2018-12-20T16:32:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-21</time>
@@ -175,16 +185,21 @@
 <li>2.设置<br>编辑文件 <code>themes/yilia/_config.yml</code> ,添加一行配置，可以删除原来的google analytics<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">baidu_tongji: <span class="literal">true</span>  / xxxxxxxxxxxxxxxxx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">新建 <span class="string">`themes/yilia/layout/_partial/baidu_tongji.ejs`</span> 内容如下</span><br><span class="line"></span><br><span class="line">&lt;% <span class="keyword">if</span> (theme.baidu_tongji) &#123; %&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">#申请的百度统计代码</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">编辑`themes/yi</span>lia/layout/_partial/head.ejs<span class="string">` 在 &lt;/head&gt; 前添加</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;%- partial("baidu_tongji") %&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>重新生产部署站点即可。<br>nice，安装成功。</p>
+<p>重新生产部署站点即可。</p>
+<p><img src="/img/百度统计界面.png" alt="" title="点击刷新"></p>
+<p>nice，安装成功。</p>
 <h3 id="来必力"><a href="#来必力" class="headerlink" title="来必力"></a>来必力</h3><p>注册账号<br>（来必力<br>Yoona-lin<br>lxxxxxxxxxxx<br><a href="mailto:20xxxxxxxxx@qq.com" target="_blank" rel="noopener">20xxxxxxxxx@qq.com</a></p>
 <p>打开来必力官网： </p>
 <p><a href="https://livere.com" target="_blank" rel="noopener">来必力</a></p>
 <p>按套路注册（注册挺慢的，要等它页面刷出来，然后接受到一封韩文验证码qq文件，百度翻译阅读，继续安装）。（貌似需要科学上网？之前没科学上网好像登录界面显示不了）。</p>
 <p>安装<br>点击上方的安装，选择免费的city版本。</p>
-<p>并点击现在安装，出现如下界面。</p>
-<p>复制其中的uid字段。</p>
-<p>打开主题目录下的 <code>blog/themes/next/_config.yml</code> 配置文件，定位到 <code>livere_uid</code>(没有就直接添加在评论功能附近) 字段，粘贴上刚刚复制的UID。</p>
-<p>至此，大功告成。<br>效果展示（明天搞定）</p>
+<p>并点击现在安装，出现如下界面。<br><img src="/img/来必力注册1.png" alt="" title="点击刷新"><br><img src="/img/来必力注册2.png" alt="" title="点击刷新"><br>复制其中的uid字段。</p>
+<p>打开主题目录下的 <code>blog/themes/next/_config.yml</code> 配置文件，定位到 <code>livere_uid</code>(没有就直接添加在评论功能附近) 字段。</p>
+<p>在<code>hexo\themes\yilia\layout_partial\post\</code>下新建一个<code>livere_uid.ejs</code>的文件,将上述代码copy到该文件中<br><img src="/img/来必力代码1.png" alt="" title="点击刷新"></p>
+<p>修改<code>hexo\themes\yilia\layout_partial\article.ejs</code>,找到<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="keyword">if</span> (!index &amp;&amp; post.comments)&#123; %&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在下面添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.livere_uid)&#123; %&gt;</span><br><span class="line">  &lt;%- partial(<span class="string">'post/livere_uid'</span>, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/img/来必力代码3.png" alt="" title="点击刷新"><br>或者直接把上述代码放在这里<br><img src="/img/来必力代码2.png" alt="" title="点击刷新"></p>
+<p>至此，大功告成。<br>效果展示（下拉看看~~~~）<br><img src="/img/来必力效果图.png" alt="" title="点击刷新"></p>
 
       
 
@@ -340,10 +355,33 @@
 
 
   
-  
+
   
 
   
+
+  
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MTc2My8xODMwOQ==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+
+  
+
 
   
 
@@ -449,19 +487,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ASP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ASP.NET</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">.NET.Core</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ASP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
               </li>
              
               <li class="article-tag-list-item">
