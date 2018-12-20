@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="hexo如何使html文件不被解析">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-24T17:36:39.696Z">
+<meta property="og:updated_time" content="2018-12-20T08:18:01.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo如何使html文件不被解析">
 <meta name="twitter:description" content="hexo如何使html文件不被解析">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			<img src="/img/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">lin</a></h1>
@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+				<img src="/img/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">lin</h1>
@@ -173,8 +173,7 @@ var _hmt = _hmt || [];
 <h3 id="2-hexo如何使md文件不被解析"><a href="#2-hexo如何使md文件不被解析" class="headerlink" title="2.hexo如何使md文件不被解析"></a>2.hexo如何使md文件不被解析</h3><p>使用上面的办法虽然不会渲染 md 文件，但是还是将 md 文件转化成了 html 文件，如果想保留原 md 文件后缀要怎么做呢？这就需要在 站点配置文件 <code>_config.yml 中配置，找到 skip_render 参数，开始匹配的位置是基于你的 source_dir 的，一般来说，是你的 source 文件夹下。下面我分别列举几种常见的情况进行说明：`</code></p>
 <p><code>skip_render: test/* 单个文件夹下全部文件`</code><br><code>skip_render: test/*.md 单个文件夹下指定类型文件`</code><br><code>skip_render: test/** 单个文件夹下全部文件以及子目录`</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">skip_render: README.md</span><br><span class="line">  - <span class="string">`test1/*.html`</span></span><br><span class="line">  - <span class="string">`test2/**`</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-hexo总结渲染html文件"><a href="#3-hexo总结渲染html文件" class="headerlink" title="3.hexo总结渲染html文件"></a>3.hexo总结渲染html文件</h3><p>1）首先要先设置不被hexo渲染模式，然后再在hexo文件里进行调用<br>2）模仿已经完成例子</p>
-<p>b</p>
+<h3 id="3-hexo总结渲染html文件"><a href="#3-hexo总结渲染html文件" class="headerlink" title="3.hexo总结渲染html文件"></a>3.hexo总结渲染html文件</h3><p>1）首先要先设置不被hexo渲染模式，然后再在hexo文件里进行调用<br>2）模仿已经完成例子(查看已完成例子)</p>
 
       
 
@@ -268,8 +267,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2018/06/09/个人简历封面/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">个人简历</div>
+    <a href="/2018/07/20/hexo搭建个人博客总结（五）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo如何使html文件不被解析</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -288,6 +287,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-hexo如何使html文件不被解析"><span class="toc-number">1.</span> <span class="toc-text">1.hexo如何使html文件不被解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo如何使md文件不被解析"><span class="toc-number">2.</span> <span class="toc-text">2.hexo如何使md文件不被解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-hexo总结渲染html文件"><span class="toc-number">3.</span> <span class="toc-text">3.hexo总结渲染html文件</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -412,23 +424,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ASP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -440,7 +440,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -452,7 +460,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,11 +472,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">路线</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -480,19 +512,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">面试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,14 +521,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
             
             <div class="clearfix"></div>

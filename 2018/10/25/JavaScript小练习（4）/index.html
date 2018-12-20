@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="JavaScript、html、css 小练习与知识点">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-25T13:21:22.484Z">
+<meta property="og:updated_time" content="2018-10-31T10:15:28.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript小练习(4)">
 <meta name="twitter:description" content="JavaScript、html、css 小练习与知识点">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			<img src="/img/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">lin</a></h1>
@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+				<img src="/img/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">lin</h1>
@@ -172,6 +172,7 @@ var _hmt = _hmt || [];
 <h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">下面代码输出什么内容：</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeNoSense</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.x = x;</span><br><span class="line">&#125;</span><br><span class="line">makeNoSense(<span class="number">5</span>); <span class="comment">// 5 x已经是一个=值为5的全局变量</span></span><br><span class="line"><span class="built_in">console</span>.log(x);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.x = <span class="number">1</span>;</span><br><span class="line">  alert(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;</span><br><span class="line">test();<span class="comment">// 1</span></span><br><span class="line">这是函数的最通常用法，属于全局性调用，因此<span class="keyword">this</span>就代表全局变量Clobal；函数也可以被调用，此时<span class="keyword">this</span>绑定到全局对象。</span><br></pre></td></tr></table></figure>
 <h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.x = x;</span><br><span class="line">  <span class="keyword">this</span>.y = y;</span><br><span class="line">  <span class="keyword">this</span>.moveTo = <span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x = x;</span><br><span class="line">    <span class="keyword">this</span>.y = y;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.x+<span class="string">","</span>+<span class="keyword">this</span>.y);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Point(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line"><span class="keyword">var</span> p2 = &#123;<span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span>&#125;;</span><br><span class="line">p1.moveTo(<span class="number">1</span>,<span class="number">1</span>);<span class="comment">//1,1</span></span><br><span class="line">p1.moveTo.apple(p2,[<span class="number">10</span>,<span class="number">10</span>]);<span class="comment">//10,10</span></span><br><span class="line">在上面的例子中，我们使用构造函数生成一个对象p1，该对象同时具有moveTo方法；使用对象字面量创建另一个对象p2，我们看到使用apple方法可以将p1的方法应用到p2上，这时的<span class="keyword">this</span>也绑定到对象p2上，指向p2；另一个方法call也具备同样的功能，不同的是最后的参数不是作为数组统一传入，而是分开传入的。</span><br></pre></td></tr></table></figure>
 <h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">下面代码输出什么内容？</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a=b=<span class="number">3</span>;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"a defined?"</span> + (<span class="keyword">typeof</span> a!==<span class="string">'undefined'</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"b defined?"</span> + (<span class="keyword">typeof</span> b!==<span class="string">'undefined'</span>));</span><br><span class="line">这里的问题是大多数开发人员错误理解语句 <span class="keyword">var</span> a=b=<span class="number">3</span> 为：<span class="keyword">var</span> b=<span class="number">3</span>；<span class="keyword">var</span> b=<span class="number">3</span>；</span><br><span class="line">但实际上 <span class="keyword">var</span> a=b=<span class="number">3</span> 为： b=<span class="number">3</span>；<span class="keyword">var</span> a=b；</span><br><span class="line">因此（如果你不使用严格模式），代码片段的输出将为：</span><br><span class="line">a defined？<span class="literal">false</span>；</span><br><span class="line">b defined？<span class="literal">true</span>；</span><br><span class="line">注意：如果在严格模式下（即使用 strict），语句 <span class="keyword">var</span> a=b=<span class="number">3</span> 会产生一个<span class="built_in">ReferenceError</span>的运行时错误：b没有定义，从而避免了可能导致任何头head-fakes/bugs。（这就是为什么你应该在你的代码中使用strict，一个重要的例子）</span><br></pre></td></tr></table></figure>
+<h3 id="4-写一个sum方法，当使用下面的语法调用时它将正常工作："><a href="#4-写一个sum方法，当使用下面的语法调用时它将正常工作：" class="headerlink" title="4.写一个sum方法，当使用下面的语法调用时它将正常工作："></a>4.写一个sum方法，当使用下面的语法调用时它将正常工作：</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">2</span>,<span class="number">3</span>));  <span class="comment">//Outputs 5</span></span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">2</span>)(<span class="number">3</span>));  <span class="comment">//Outputs 5</span></span><br><span class="line"></span><br><span class="line">有至少两种方法可以做到这一点：</span><br><span class="line">方法一：</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="built_in">arguments</span>.lenght == <span class="number">2</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">arguments</span>[<span class="number">0</span>] + <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">  &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">y</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> x + y;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">在JavaScript中，函数提供对参数对象的访问，该对象提供对传递给函数的实际参数的访问，这使我们能够使用lenght属性在运行时确定传递给函数的参数数量：</span><br><span class="line">如果传递两个参数，那我们就直接相加并返回；</span><br><span class="line">否则，我们假设它是以sun(<span class="number">2</span>)(<span class="number">3</span>)的形式被调用的，所以我们返回一个匿名函数，它将传递给sun（）（本例中为<span class="number">2</span>）的参数和传递给匿名函数的参数</span><br><span class="line">方法二：</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(y !== <span class="literal">undefined</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">y</span>)</span>&#123;<span class="keyword">return</span> x + y;&#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">当函数被调用，JavaScript不需要参数的数量来匹配函数定义中的参数数量，如果传递的参数数量超过了函数定义中的参数数量，则超出的参数将被忽略；另一方面，如果传递的参数少于定于中的参数数量，则在函数内引用时，缺少是参数将具有未定义的值；因此在上面的例子，通过简单地检查第二个参数是否未定义，我们可以确定函数被调用的方式并相应继续。</span><br></pre></td></tr></table></figure>
 <p>。。。</p>
 
       
@@ -290,6 +291,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-number">1.</span> <span class="toc-text">1.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-number">2.</span> <span class="toc-text">2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-number">3.</span> <span class="toc-text">3.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-写一个sum方法，当使用下面的语法调用时它将正常工作："><span class="toc-number">4.</span> <span class="toc-text">4.写一个sum方法，当使用下面的语法调用时它将正常工作：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -414,23 +428,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ASP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -442,7 +444,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -454,7 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,11 +476,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">路线</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,19 +516,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">面试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,14 +525,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
             
             <div class="clearfix"></div>

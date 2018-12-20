@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="认识ASP.NET 与 ASP.NET,Core">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-28T03:01:45.532Z">
+<meta property="og:updated_time" content="2018-10-31T09:23:20.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASP.NET 与 .NET.Core 相关知识点">
 <meta name="twitter:description" content="认识ASP.NET 与 ASP.NET,Core">
@@ -56,7 +56,7 @@ var _hmt = _hmt || [];
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+			<img src="/img/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">lin</a></h1>
@@ -106,7 +106,7 @@ var _hmt = _hmt || [];
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="http://p7sh0ytqi.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg" class="js-avatar">
+				<img src="/img/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">lin</h1>
@@ -222,6 +222,22 @@ var _hmt = _hmt || [];
 <li>业户逻辑层     service</li>
 <li>用户表现层     web</li>
 </ul>
+<h3 id="4-QueryString-认识"><a href="#4-QueryString-认识" class="headerlink" title="4.QueryString 认识"></a>4.QueryString 认识</h3><p><code>字面意思就是查询字符串</code></p>
+<p><a href="http://www.aaabbb.com?name=zs&amp;pwd=123" target="_blank" rel="noopener">http://www.aaabbb.com?name=zs&amp;pwd=123</a></p>
+<p>介绍QueryString的创建与使用</p>
+<p>（1）创建<br>就是放在一个网址后面<br><code>？变量名=变量值</code><br><code>？变量名1=变量值1&amp;变量名2=变量值2&amp;....</code><br><a herf="http://www.baidu.com?id=1&cc=lili"></a></p>
+<p>(2)使用<br>Request.QueryString[“id”]   //得到 1<br>Request.QueryString[“cc”]   //得到 lili<br>Request.QueryString[“aaaa”]  //得到null，找不到</p>
+<p>用途：在做删除和修改的时候，非常有用，跟在网址后面</p>
+<h3 id="5-Session-的创建与使用"><a href="#5-Session-的创建与使用" class="headerlink" title="5. Session 的创建与使用"></a>5. Session 的创建与使用</h3><p>概念：Session即会话，是指一个用户在一段时间内对某一个站点的一次访问。<br>（1）创建：<br>Session[“变量名”]=值’；<br>Session.add(“变量名”，值)；</p>
+<p>Session[“username”]=”zs”;等同于 Session.Add(“username”,”zs”);</p>
+<p>(2)使用<br>Session[“变量名”]就可以了<br>Session[‘username’]   这就是代表“zs”这个字符串</p>
+<p>（3）移出<br>Session.RemoveAll() 或者  Session.Clear()<br>一般情况下Session的有效时间为20分钟<br>Session.Timeout=…;</p>
+<p>常用于的场景： 登录</p>
+<p>2.Coolie<br>概念：有时也用其复数形式Coolies，指某些网站为了辨别用户身份、进行session跟踪而储存在用户本地终端上的密码： 1周， 1个月， 1年</p>
+<p>（1）创建<br>HttpCookie cookie = new HttpCookie[“aspcn”];<br>cookie.Value = “aaa”;<br>Response.AppendCookie(cookie);    //写到本地浏览器</p>
+<p>cookie.Value.Add(“webmaster”,”aaa”);<br>cookie.Value.Add(“writer”,”beige”);<br>cookie.Value.Add(“LinkColor”,”blue”);<br>Response.AppendCookie(cookie);</p>
+<p>(2)使用<br>HttpCookie cookie = Request.Cookies[“aspcn”];    //Request对象取cookie的值<br>value1 = cookie.Value[“webmaster”];<br>value2 = cookie.Value[“writer”];</p>
+<p>HttpCookie cookie = Request.cookie[strkey];<br>if(null == cookie){<br>  //cookie不存在<br>}</p>
 <p>///</p>
 
       
@@ -310,6 +326,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2018/12/20/SQL数据库实验报告/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SQL数据库实验报告
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/10/25/JavaScript小练习（4）/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">JavaScript小练习(4)</div>
@@ -331,6 +356,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-ASP-net-mvc5和asp-net-core有什么区别呢，前景如何："><span class="toc-number">1.</span> <span class="toc-text">1.ASP.net mvc5和asp.net.core有什么区别呢，前景如何：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-视频资源"><span class="toc-number">2.</span> <span class="toc-text">2.视频资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ASP-NET相关介绍"><span class="toc-number">3.</span> <span class="toc-text">3.ASP.NET相关介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-QueryString-认识"><span class="toc-number">4.</span> <span class="toc-text">4.QueryString 认识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Session-的创建与使用"><span class="toc-number">5.</span> <span class="toc-text">5. Session 的创建与使用</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -455,23 +493,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ASP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,7 +509,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">小练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,7 +529,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,11 +541,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">简历</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">路线</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,19 +581,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">面试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -544,14 +590,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">杂集合</a>
               </li>
             
             <div class="clearfix"></div>
