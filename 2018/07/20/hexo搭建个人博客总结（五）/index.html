@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yoona-lin">
 <meta property="og:description" content="hexo搭建个人博客总结–继续补充加强（统计功能）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-20T16:47:29.719Z">
+<meta property="og:updated_time" content="2018-12-20T17:09:42.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo如何使html文件不被解析">
 <meta name="twitter:description" content="hexo搭建个人博客总结–继续补充加强（统计功能）">
@@ -34,15 +34,16 @@
   
 
   
-<script>
-var _hmt = _hmt || [];
-(function() {
-	var hm = document.createElement("script");
-	hm.src = "https://hm.baidu.com/hm.js?24451a8b853bb443019686be21dfdff4";
-	var s = document.getElementsByTagName("script")[0]; 
-	s.parentNode.insertBefore(hm, s);
-})();
-</script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?2773f7a57b6a920ffa37bc6295e2a9a8";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
 
 
 </head>
@@ -170,14 +171,45 @@ var _hmt = _hmt || [];
       
         <p>hexo搭建个人博客总结–继续补充加强（统计功能）<br><a id="more"></a></p>
 <h3 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h3><ul>
-<li><p>1.资料<br>  百度统计<br>  yoona-lin<br>  Lxxxxxxxxxxxxxxj<br>  155xxxxxxxxx56</p>
-</li>
-<li><p>2.</p>
+<li>1.资料<br>  百度统计<br>  yoona-lin<br>  Lxxxxxxxxxxxxxxj<br>  155xxxxxxxxx56<br>  相关申请流程百度可知</li>
+<li>2.设置<br>编辑文件 <code>themes/yilia/_config.yml</code> ,添加一行配置，可以删除原来的google analytics<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">baidu_tongji: <span class="literal">true</span>  / xxxxxxxxxxxxxxxxx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">新建 <span class="string">`themes/yilia/layout/_partial/baidu_tongji.ejs`</span> 内容如下</span><br><span class="line"></span><br><span class="line">&lt;% <span class="keyword">if</span> (theme.baidu_tongji) &#123; %&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">#申请的百度统计代码</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">编辑`themes/yi</span>lia/layout/_partial/head.ejs<span class="string">` 在 &lt;/head&gt; 前添加</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;%- partial("baidu_tongji") %&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>重新生产部署站点即可。</p>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>老板大气，谢谢老板！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝支付码.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信支付码.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -433,14 +465,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">知识点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小练习</a>
               </li>
              
@@ -449,7 +473,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">知识点</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -458,10 +494,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,15 +533,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小插件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">codepen</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
