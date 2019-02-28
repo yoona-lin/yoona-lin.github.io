@@ -9,7 +9,7 @@
   <title>hexo搭建个人博客总结（5） | yoona-lin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="hexo搭建个人博客总结–继续补充加强（统计功能与评论功能）">
-<meta name="keywords" content="hexo">
+<meta name="keywords" content="hexo,统计、评论功能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建个人博客总结（5）">
 <meta property="og:url" content="http://github.com/2018/12/21/hexo搭建个人博客总结（五）/index.html">
@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://github.com/img/来必力代码3.png">
 <meta property="og:image" content="http://github.com/img/来必力代码2.png">
 <meta property="og:image" content="http://github.com/img/来必力效果图.png">
-<meta property="og:updated_time" content="2018-12-20T19:58:03.612Z">
+<meta property="og:updated_time" content="2018-12-21T03:27:16.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建个人博客总结（5）">
 <meta name="twitter:description" content="hexo搭建个人博客总结–继续补充加强（统计功能与评论功能）">
@@ -70,7 +70,7 @@
 			<img src="/img/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">lin</a></h1>
+		  <h1 class="header-author"><a href="/">yoona-lin</a></h1>
 		</hgroup>
 		
 
@@ -120,7 +120,7 @@
 				<img src="/img/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">lin</h1>
+			  <h1 class="header-author js-header-author">yoona-lin</h1>
 			</hgroup>
 			
 			
@@ -200,6 +200,8 @@
 <p>在下面添加<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.livere_uid)&#123; %&gt;</span><br><span class="line">  &lt;%- partial(<span class="string">'post/livere_uid'</span>, &#123;</span><br><span class="line">    key: post.slug,</span><br><span class="line">    title: post.title,</span><br><span class="line">    url: config.url+url_for(post.path)</span><br><span class="line">  &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
 <p><img src="/img/来必力代码3.png" alt="" title="点击刷新"><br>或者直接把上述代码放在这里<br><img src="/img/来必力代码2.png" alt="" title="点击刷新"></p>
 <p>至此，大功告成。<br>效果展示（下拉看看~~~~）<br><img src="/img/来必力效果图.png" alt="" title="点击刷新"></p>
+<p>测试问题：来必力评论功能加载过慢，很影响体验<br>百度到另一个评论插件valine，更好用一些。速度快。简洁漂亮，功能也不少。<br>等再测试一阵子再换个看看</p>
+<p>。。。</p>
 
       
 
@@ -245,6 +247,10 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">统计、评论功能</a>
         		</li>
       		
 		</ul>
@@ -313,6 +319,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/12/23/hexo搭建个人博客总结（六）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo搭建个人博客总结（6）
+        
+      </div>
+    </a>
   
   
     <a href="/2018/12/20/SQL数据库实验报告/" id="article-nav-older" class="article-nav-link-wrap">
@@ -395,7 +410,7 @@
   <div class="outer">
     <div id="footer-info">
         <div class="footer-left">
-        &copy; 2018 lin
+        &copy; 2019 yoona-lin
         
             <span id="busuanzi_container_site_pv">本站被踩过<span id="busuanzi_value_site_pv"></span>次</span>
         
@@ -483,15 +498,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ASP.NET</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">.NET.Core</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,6 +558,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">统计、评论功能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">评论功能</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">简历</a>
               </li>
              
@@ -583,11 +610,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,6 +671,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="https://www.baidu.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>百度一下</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.qdfuns.com/u/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个人前端网</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://www.cnblogs.com/yoona-lin/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>个人博客网</a>
             </li>
           
         </ul>
