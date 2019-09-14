@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="经常有大佬问起这方面的问题，现在整理其他博客文章重要知识点，多多背诵">
   
   
-    <link rel="icon" href="http://ou36vgj5u.bkt.clouddn.com/image/blog/fav.ico">
+    <link rel="icon" href="/img/Webicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -284,7 +284,7 @@
 </ul>
 <h3 id="11-js自定义事件"><a href="#11-js自定义事件" class="headerlink" title="11.js自定义事件"></a>11.js自定义事件</h3><ul>
 <li>js自定义事件用处较多，最主要的就是实现观察者模式.<br>观察者模式( 又叫发布者-订阅者模式 )应该是最常用的设计模式之一。<br>平时接触的dom事件. 也是js和dom之间实现的一种观察者模式.<br>观察者模式举例：<br>div.onclick  =  function click (){<br> alert ( ‘’click’ )<br>}<br>只要订阅了div的click事件. 当点击div的时候, function click就会被触发.Div为发布者，click事件为订阅者</li>
-<li>自定义事件例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"Scripts/jquery-2.1.1.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">'body'</span>).on(<span class="string">'someclick'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'被点击了~~'</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">'body'</span>).trigger(<span class="string">'someclick'</span>);</span><br><span class="line">        &#125;);      </span><br><span class="line">   &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<li>自定义事件例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"Scripts/jquery-2.1.1.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">    &lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">'body'</span>).on(<span class="string">'someclick'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'被点击了~~'</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">            $(<span class="string">'body'</span>).trigger(<span class="string">'someclick'</span>);</span><br><span class="line">        &#125;);      </span><br><span class="line">   &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>on（）是jQuery中的类似于bind（），live（），delegate（）等绑定事件的方法。</p>
@@ -628,11 +628,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ASP</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">图书管理系统系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,11 +660,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color5">评论功能</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -664,23 +676,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">项目练习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">实验报告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">简历</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">评论功能</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,15 +692,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
+                <a href="javascript:void(0)" class="js-tag color3">路线</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">前端网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -716,6 +716,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小插件</a>
               </li>
              
@@ -724,23 +728,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">小程序</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
+                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">编辑器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">区块链</a>
+                <a href="javascript:void(0)" class="js-tag color5">工具插件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -748,15 +748,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">路线</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">面试题</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">人工智能</a>
               </li>
             
             <div class="clearfix"></div>
